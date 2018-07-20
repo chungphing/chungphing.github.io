@@ -1,7 +1,7 @@
 
-const routerBase = process.env.DEPLOY_ENV === 'MASTER' ? {
+const routerBase = process.env.DEPLOY_ENV === 'GH-PAGES' ? {
   router: {
-    base: '/chungphing/'
+    base: '/chungphing-site/'
   }
 } : {}
 
