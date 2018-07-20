@@ -1,21 +1,20 @@
 <template>
   <div>
+    <topbar></topbar>
     <nuxt/>
   </div>
 </template>
+<script>
+import Topbar from '~/components/topbar.vue'
+
+export default {
+   components: {
+    Topbar
+  }
+}
+</script>
 
 <style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
@@ -48,6 +47,59 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+body{
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*end fix*/
+#__nuxt {
+  font-family:  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+}
+#__layout {
+   width: 100%;
+  margin: auto;
+  max-width: 1012px;
+  min-height: 100vh;
+  color: #454545;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+.container,
+.content,
+.header,
+.header-list,
+.footer {
+	display: flex;
+}
+.container{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+.content{
+  flex: 1;
 }
 </style>
 
