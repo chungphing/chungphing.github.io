@@ -1,5 +1,5 @@
 
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+const routerBase = process.env.DEPLOY_ENV === 'MASTER' ? {
   router: {
     base: '/chungphing/'
   }
@@ -41,6 +41,7 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  ...routerBase
 }
 
