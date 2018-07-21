@@ -123,7 +123,7 @@ core-button,
   width: 100%;
   height: 600px;
   z-index: -1;
-  background:url('~/assets/anas-alshanti-169265-unsplash.jpg') no-repeat; 
+  background:linear-gradient(0deg,rgba(63,176,255,1),rgba(63,176,255,1)), url('~/assets/sergey-zolkin-192937-unsplash.jpg') no-repeat; 
   background-blend-mode: darken;
   background-size: cover;
 }
