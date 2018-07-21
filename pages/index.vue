@@ -41,7 +41,6 @@
 import CoreButton from '~/components/_baseComponents/core-button'
 export default {
   components: {
-    AppLogo,
     CoreButton
   }
 }

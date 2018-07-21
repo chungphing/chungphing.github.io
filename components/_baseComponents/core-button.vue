@@ -14,7 +14,7 @@ export default {
   text-transform: uppercase;
   border: none;
   letter-spacing: 2px;
-  padding: 8px 32px;
+  padding: 12px 32px;
   cursor: pointer;
   background-color: white;
   color: black;
