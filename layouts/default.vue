@@ -33,16 +33,17 @@ body{
 }
 /*end fix*/
 #__nuxt {
-  font-family:  sans-serif;
+  font-family: 'Catamaran', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 #__layout {
   width: 100%;
-  max-width: 1012px;
+  max-width: 800px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

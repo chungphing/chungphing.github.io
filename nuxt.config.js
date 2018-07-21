@@ -17,7 +17,9 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'A Developer in Cambodia' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Abel|Anton|Basic|Cairo|Ropa+Sans' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Assistant:200|Catamaran:200'}
     ]
   },
   // css: [
@@ -28,7 +30,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#128de0' },
   /*
   ** Build configuration
   */

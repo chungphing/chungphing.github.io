@@ -1,8 +1,6 @@
 <template>
   <div class="header">
-    <div class="header-branding-container">
-            <router-link to="/"  class="header-branding"><span>Chungphing ly</span></router-link>
-    </div>
+    <router-link to="/"  class="header-branding"><span>Chungphing ly</span></router-link>
     <div class="header-list">
             <a href="#service" class="header-item">
               About
@@ -42,29 +40,31 @@ export default {
     width: 100%;
     z-index: 10;
     padding: 0 48px;
-    justify-content: space-between;
-}
-.header-branding-container{
-    margin: 6px 0;
-    margin-right: auto;
-  align-content:flex-start;
+    margin: 18px 0;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    
 }
 .header-branding{
   font-weight: bold;
   font-size: 1rem;
   letter-spacing: 3px;
   text-align: center;
-  align-self: flex-start;
   color: #fff;
 }
 .header-item {
-    font-size: 1rem;
+    font-size: .8rem;
     vertical-align: middle;
     color:#fff;
+    letter-spacing: 2px;
 }
 .header-item:hover{
-    color: #fff;
+    color: #adadad;
     cursor: pointer;
+    box-shadow: inset 0px -1px 0px 0px #128ee0;
 }
 .active-item {
     color: #fff;

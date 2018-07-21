@@ -12,18 +12,17 @@ export default {
 
 .core-button{ 
   text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 600;
   border: none;
+  letter-spacing: 2px;
   padding: 8px 32px;
   cursor: pointer;
   background-color: white;
-  color: #128ee0;
+  color: black;
   transition: all 0.08s ease-in-out;
 }
 
 .core-button:hover {
-  background-color: #128ee0;
+  background-color: #128de0af;
   color: white;
 }
 
