@@ -10,13 +10,14 @@
       <p class="subtitle">
       I enjoy coffee and good looking websites.
       </p>
-      <h2 class="headline">
-       I Do 
-       <span class="brand-skill --active">Website Development</span>
-       <span class="brand-skill">Website Design</span>
-       <span class="brand-skill">Single Page App</span>
-       <span class="brand-skill">Android App</span>
-      </h2>
+      <div class="wrapper">
+        <span class="i-do">
+              I Do
+        </span>
+          <transition-group  tag="div" class="brand-slide" name="slide">
+              <span class="brand-skill" v-for="number in [index]" v-bind:key="number">{{ skilllist[Math.abs(index) % skilllist.length] }}</span>
+          </transition-group>
+      </div>
        <core-button 
         title="Get in touch"
         >
@@ -29,7 +30,7 @@
       </svg>
     </div>
     <div class="feature">
-      <p>Recent Works</p>
+      <div class="recent-text"><p>Recent Works</p><p class="see-all">See all</p></div>
       <div class="recent-works">
         <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
         <p>Work Title</p></div>
@@ -50,8 +51,31 @@
         <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
         <p>Work Title</p></div>
         <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
-        <p>Work Title</p></div>
+        <p>Work Title</p>
+        </div>
     </div>
+    </div>
+    <div class="values">
+      <div class="design">
+        <p>I Value Simplicity</p>
+        <p>putting content first, style second</p>
+        <p>because that's what matter</p>
+      </div>
+      <div class="dev">
+        <p>i love new technologies</p>
+        <p>adapting to up-and-coming tools and technologies to improve today product</p>
+        <p>normaly push forward in speed and functionality, normally...</p>
+      </div>
+      <div class="dev">
+        <p>i write for all platform</p>
+        <p>responsive web design for all form factor</p>
+        <p>destop, tablet, phone, all screen matter</p>
+      </div>
+    </div>
+    <div class="contact">
+        <div>contact me</div>
+        <span>or</span>
+        <div>get my resume</div>
     </div>
   </section>
 </template>
@@ -61,7 +85,22 @@ import CoreButton from '~/components/_baseComponents/core-button'
 export default {
   components: {
     CoreButton
-  }
+  },
+  data: function () {
+      return {
+        skilllist: [
+        'Web Design',
+        'Web Development',
+        'Mobile App'
+      ],
+      index: 0
+      }
+  },
+  mounted: function () {
+      setInterval(() => {
+            this.index = this.index + 1;
+          }, 3000);
+    }
 }
 </script>
 
@@ -100,12 +139,40 @@ core-button,
   color: #fff;
   text-transform: uppercase;
 }
-.headline .brand-skill {
-  display: none;
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
+.brand-slide{
+  display: block;
+  width: 250px;
+  height:50px;
+  position: relative;
+  overflow: hidden;
+}
+.i-do {
+  margin: 0 5px 0 0;
+  font-size: 18px;
+}
+
+.brand-skill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 18px;
+}
+/* 
 .headline .--active {
+   transition: all 300ms linear;
   display: inline;
-}
+  transform: translateY(30px);
+} */
 .headline {
   text-transform: uppercase;
   letter-spacing: 6px;
@@ -123,10 +190,19 @@ core-button,
   background: rgba(0, 0, 0, 0.1);
   padding: 8px;
 }
-.feature > p {
+.feature > .recent-text{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.feature > .recent-text p {
   font-size: 20px;
   color: #fff;
-  margin: 0;
+}
+.see-all {
+  margin-left: auto;
+  font-weight: bold;
+  cursor: pointer;
 }
 .recent-works{
   width: 100%;
@@ -146,17 +222,17 @@ core-button,
 }
 .scroll{
   width: 100%;
-  margin: 100px 0;
+  margin: 60px 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .arrow{
   cursor: pointer;
+  transition: all 300ms ease-in-out;
 }
 .arrow:hover{
-   animation: down .2s ease-in-out alternate;
-    animation-fill-mode: forwards;
+  transform: translateY(10px);
 }
 .introduction::after{
   content: '';
@@ -187,15 +263,29 @@ core-button,
     width: 100%;
   }
 }
-
-
-@keyframes down {
-  from {
-    transform: translateY(0)
+@media only screen and (min-width: 800px) {
+  .brand-slide{
+    width: 350px;
   }
-  to {
-    transform: translateY(10px);
+  .i-do {
+    font-size: 28px;
+  }
+
+  .brand-skill {
+    font-size: 28px;
   }
 }
+/* animation */
+.slide-leave-active,
+.slide-enter-active {
+  transition: 300ms;
+}
+.slide-enter {
+  transform: translate(0, 100%);
+}
+.slide-leave-to {
+  transform: translate(0, -100%);
+}
+
 </style>
 
