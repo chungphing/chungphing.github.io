@@ -43,7 +43,6 @@ export default {
     z-index: 10;
     padding: 0 48px;
     justify-content: space-between;
-    background: white;
 }
 .header-branding-container{
     margin: 6px 0;
@@ -56,19 +55,19 @@ export default {
   letter-spacing: 3px;
   text-align: center;
   align-self: flex-start;
-  color: #454545;
+  color: #fff;
 }
 .header-item {
     font-size: 1rem;
     vertical-align: middle;
-    color: #454545;
+    color:#fff;
 }
 .header-item:hover{
-    color: #454545;
+    color: #fff;
     cursor: pointer;
 }
 .active-item {
-    color: #454545;
+    color: #fff;
 }
 
 .header-list{

@@ -14,40 +14,8 @@ export default {
 }
 </script>
 
-<style>
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+<style lang="scss">
+@import url('~/assets/styles/variables.scss');
 img {
   width: 100%;
   height: auto;
@@ -58,6 +26,7 @@ a {
 }
 body{
   display: flex;
+  width: 100%;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -68,13 +37,13 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 #__layout {
-   width: 100%;
-  margin: auto;
+  width: 100%;
   max-width: 1012px;
   min-height: 100vh;
-  color: #454545;
   display: flex;
   flex-direction: column;
   padding: 0;

@@ -8,10 +8,9 @@ export default {
   props: ['title', 'color']
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
 
-.core-button{
-  border-radius: 24px;
+.core-button{ 
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 600;
@@ -19,7 +18,6 @@ export default {
   padding: 8px 32px;
   cursor: pointer;
   background-color: white;
-  border: 1px solid #128ee0;
   color: #128ee0;
   transition: all 0.08s ease-in-out;
 }

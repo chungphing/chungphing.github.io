@@ -1,24 +1,16 @@
 <template>
   <section class="content">
-    <div>
-      <app-logo/>
+    <div class="introduction">
       <h1 class="title">
         chungphing
       </h1>
       <h2 class="subtitle">
         A Developer in Cambodia
       </h2>
-      <div class="links">
-        <core-button 
+       <core-button 
         title="test"
         >
         </core-button>
-      </div>
-      <div>
-       
-
-        
-      </div>
     </div>
   </section>
 </template>
@@ -34,7 +26,34 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.introduction{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px
+}
+.introduction::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  z-index: -1;
+  background: url('~/assets/sergey-zolkin-192937-unsplash.jpg') no-repeat; 
+  background-blend-mode: darken;
+  background-size: cover;
+}
 </style>
 
