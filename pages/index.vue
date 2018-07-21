@@ -5,13 +5,17 @@
         Hi!
       </p>
       <p class="subtitle">
-        My name is Chungphing Ly
+        My name is <span id="brand-name">Chungphing Ly</span>
       </p>
       <p class="subtitle">
-       and I enjoy designing and building websites.
+      I enjoy coffee and good looking websites.
       </p>
       <h2 class="headline">
-       I Do Web Development
+       I Do 
+       <span class="brand-skill --active">Website Development</span>
+       <span class="brand-skill">Website Design</span>
+       <span class="brand-skill">Single Page App</span>
+       <span class="brand-skill">Android App</span>
       </h2>
        <core-button 
         title="Get in touch"
@@ -25,13 +29,28 @@
       </svg>
     </div>
     <div class="feature">
-      <p class="title">Recent Works</p>
+      <p>Recent Works</p>
       <div class="recent-works">
-        <div class="recent-item"><img src="http://via.placeholder.com/200x100" alt="thumbnail"></div>
-        <div class="recent-item"><img src="http://via.placeholder.com/200x100" alt="thumbnail"></div>
-        <div class="recent-item"><img src="http://via.placeholder.com/200x100" alt="thumbnail"></div>
-        <div class="recent-item"><img src="http://via.placeholder.com/200x100" alt="thumbnail"></div>
-        <div class="recent-item"><img src="http://via.placeholder.com/200x100" alt="thumbnail"></div>
+        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+        <p>Work Title</p></div>
+        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+        <p>Work Title</p></div>
+        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+        <p>Work Title</p></div>
+        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+        <p>Work Title</p></div>
+        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+        <p>Work Title</p></div>
+        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+        <p>Work Title</p></div>
+        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+        <p>Work Title</p></div>
+        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+        <p>Work Title</p></div>
+        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+        <p>Work Title</p></div>
+        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+        <p>Work Title</p></div>
     </div>
     </div>
   </section>
@@ -75,22 +94,39 @@ core-button,
   text-transform: capitalize;
   font-weight: bold;
   color: #adadad;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+}
+.subtitle #brand-name {
+  color: #fff;
+  text-transform: uppercase;
+}
+.headline .brand-skill {
+  display: none;
+}
+.headline .--active {
+  display: inline;
 }
 .headline {
   text-transform: uppercase;
   letter-spacing: 6px;
-  margin: 8px 0;
+  margin: 2px 0;
 }
 .core-button{
   width: 200px;
 
 }
 .feature{
- width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   overflow: auto;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 8px;
+}
+.feature > p {
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
 }
 .recent-works{
   width: 100%;
@@ -99,10 +135,18 @@ core-button,
   overflow: auto;
 }
 .recent-item {
-  margin: 3px;
+  padding: 4px;
+}
+.recent-item:hover {
+  background: #02020248;
+}
+.recent-item p {
+  margin: 2px 0;
+  color: #fff;
 }
 .scroll{
   width: 100%;
+  margin: 100px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +165,7 @@ core-button,
   top: 0;
   left: 0;
   width: 100%;
-  height: 600px;
+  height: 900px;
   z-index: -1;
   background:linear-gradient(0deg,rgba(63,176,255,1),rgba(63,176,255,1)), url('~/assets/sergey-zolkin-192937-unsplash.jpg') no-repeat; 
   background-blend-mode: darken;
