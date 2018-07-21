@@ -18,6 +18,12 @@
         >
         </core-button>
     </div>
+    <div class="scroll">
+      <svg class="arrow" width="50" height="50" viewBox="0 0 25 13">
+          <polyline points="0 0 12.31 12.31 24.19 0" stroke="white" stroke-width=".5"
+      stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
+      </svg>
+    </div>
     <div class="feature">
       <p class="title">Recent Works</p>
       <div class="recent-works">
@@ -32,7 +38,6 @@
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
 import CoreButton from '~/components/_baseComponents/core-button'
 export default {
   components: {
@@ -97,6 +102,19 @@ core-button,
 .recent-item {
   margin: 3px;
 }
+.scroll{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow{
+  cursor: pointer;
+}
+.arrow:hover{
+   animation: down .2s ease-in-out alternate;
+    animation-fill-mode: forwards;
+}
 .introduction::after{
   content: '';
   display: block;
@@ -109,6 +127,16 @@ core-button,
   background:linear-gradient(0deg,rgba(63,176,255,1),rgba(63,176,255,1)), url('~/assets/sergey-zolkin-192937-unsplash.jpg') no-repeat; 
   background-blend-mode: darken;
   background-size: cover;
+}
+
+
+@keyframes down {
+  from {
+    transform: translateY(0)
+  }
+  to {
+    transform: translateY(10px);
+  }
 }
 </style>
 

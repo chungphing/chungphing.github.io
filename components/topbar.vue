@@ -60,6 +60,7 @@ export default {
     vertical-align: middle;
     color:#fff;
     letter-spacing: 2px;
+    transition: box-shadow .1s ease-in-out;
 }
 .header-item:hover{
     color: #adadad;
