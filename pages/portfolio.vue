@@ -3,7 +3,7 @@
     <div>
       <app-logo/>
       <h1 class="title">
-        About page
+        Portfolio
       </h1>
       <h2 class="subtitle">
         A Developer in Cambodia
@@ -22,7 +22,6 @@
   </section>
 </template>
 
-<style>
+<script>
 
-</style>
-
+</script>

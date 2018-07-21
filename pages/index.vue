@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 .content {
   width: 100%;
   display: flex;
@@ -170,6 +170,22 @@ core-button,
   background:linear-gradient(0deg,rgba(63,176,255,1),rgba(63,176,255,1)), url('~/assets/sergey-zolkin-192937-unsplash.jpg') no-repeat; 
   background-blend-mode: darken;
   background-size: cover;
+}
+@media only screen and (max-width: 767px) {
+  .introduction {
+    height: 60vh;
+    justify-content: center;
+  }
+  .scroll {
+    height: 20vh;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .core-button {
+    width: 100%;
+  }
 }
 
 

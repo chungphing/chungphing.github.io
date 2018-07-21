@@ -2,24 +2,17 @@
   <div class="header">
     <router-link to="/"  class="header-branding"><span>Chungphing ly</span></router-link>
     <div class="header-list">
-            <a href="#service" class="header-item">
-              About
-            </a>
-            <a href="#team" class="header-item">
-            Resume
-            </a>
-            <a href="#" class="header-item">
-            Portfolio
-            </a>
-            <a href="#" class="header-item">
-            Blog
-            </a>
+          <nuxt-link class="header-item" to="/about">About</nuxt-link>
+          <nuxt-link class="header-item" to="/resume">Resume</nuxt-link>
+          <nuxt-link class="header-item" to="/portfolio">Portfolio</nuxt-link>
+          <nuxt-link class="header-item" to="/blog">Blog</nuxt-link>
       </div>
-      <button class="hamburger hamburger--collapse" type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-      </button>
+    <button class="hamburger hamburger--collapse" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
   </div>
 </template>
 
@@ -34,7 +27,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+@import '~/assets/styles/hamburgers.css';
 /*start header */
 .header{
     width: 100%;
@@ -46,19 +39,16 @@ export default {
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    
 }
 .header-branding{
   font-weight: bold;
   font-size: 1rem;
   letter-spacing: 3px;
   text-align: center;
-  color: #fff;
 }
 .header-item {
     font-size: .8rem;
     vertical-align: middle;
-    color:#fff;
     letter-spacing: 2px;
     transition: box-shadow .1s ease-in-out;
 }
@@ -94,5 +84,24 @@ export default {
 .hamburger{
   display: none;
   z-index: 100;
+  color: white;
+}
+.hamburger-box{
+  color: white;
+}
+.header,
+.header-branding,
+.header-item{
+  color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  .header-list,
+  .header-branding {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
 }
 </style>
