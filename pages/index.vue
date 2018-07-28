@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div class="wrapper">
+    <div class="introduction-wrapper">
       <section id="introduction" class="introduction">
       <p class="title">
         Hi!
@@ -25,17 +25,23 @@
         >
         </core-button>
     </section>
-    </div>
     <div class="scroll">
-      <svg class="arrow" width="50" height="50" viewBox="0 0 25 13">
+      <svg v-on:click="smoothScrollTo('feature')" class="arrow" width="50" height="50" viewBox="0 0 25 13">
           <polyline points="0 0 12.31 12.31 24.19 0" stroke="white" stroke-width=".5"
       stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
       </svg>
+    </div>
     </div>
     <div class="wrapper">
       <section id="feature" class="feature">
         <div class="recent-text"><p>Recent Works</p><p class="see-all">See all</p></div>
         <div class="recent-works">
+          <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+          <p>Work Title</p></div>
+          <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+          <p>Work Title</p></div>
+          <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+          <p>Work Title</p></div>
           <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
           <p>Work Title</p></div>
           <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
@@ -110,12 +116,11 @@
 
 
         <span class="or">or</span>
-        <div class="get-resume">
-          <core-button 
+        <core-button
+            class="get-resume" 
             title="Get My Resume"
             >
           </core-button>
-        </div>
     </section>
     </div>
   </div>
@@ -167,7 +172,6 @@ export default {
   align-items: flex-start;
 }
 .introduction{
-  width: 900px;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -201,6 +205,19 @@ core-button,
   width: 100%;
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+.introduction::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background:linear-gradient(0deg,rgba(63,176,255,1),rgba(63,176,255,1)), url('~/assets/sergey-zolkin-192937-unsplash.jpg') no-repeat; 
+  background-blend-mode: darken;
+  background-size: cover;
 }
 .brand-slide{
   display: block;
@@ -241,21 +258,17 @@ core-button,
 
 }
 .feature{
-  width: 900px;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   overflow: auto;
-  background: rgba(0, 0, 0, 0.1);
   padding: 8px;
 }
 .feature > .recent-text{
   display: flex;
   flex-direction: row;
   width: 100%;
-}
-.feature > .recent-text p {
-  font-size: 20px;
-  color: #fff;
+  text-transform: uppercase;
 }
 .see-all {
   margin-left: auto;
@@ -269,14 +282,14 @@ core-button,
   overflow: auto;
 }
 .recent-item {
-  padding: 4px;
+  padding: 8px;
+  transition: background-color 150ms linear;
 }
 .recent-item:hover {
-  background: #02020248;
+  background: #86868613;
 }
 .recent-item p {
   margin: 2px 0;
-  color: #fff;
 }
 .scroll{
   width: 100%;
@@ -292,24 +305,20 @@ core-button,
 .arrow:hover{
   transform: translateY(10px);
 }
-.introduction::after{
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 900px;
-  z-index: -1;
-  background:linear-gradient(0deg,rgba(63,176,255,1),rgba(63,176,255,1)), url('~/assets/sergey-zolkin-192937-unsplash.jpg') no-repeat; 
-  background-blend-mode: darken;
-  background-size: cover;
-}
+
 .wrapper{
   width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
+}
+.introduction-wrapper{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .values-wrapper{
   width: 100%;
@@ -320,7 +329,7 @@ core-button,
 }
 .values{
   margin: 28px 0;
-  width: 900px;
+  max-width: 900px;
  display: flex;
  flex-direction: column;
 
@@ -356,25 +365,23 @@ core-button,
   font-weight: 300;
 }
 .contact-wrapper{
-  width: 100%;
   display: flex;
+  width: 100%;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   background: rgb(5, 161, 154);
 
 }
 .contact {
-  width: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   text-align: center;
   margin: 28px 0;
   color: white;
 }
 .social{
-width: 50%;
 align-content: center;
 justify-content: center;
 align-self: center;
@@ -383,7 +390,6 @@ margin: 32px 0;
 .social-item{
   padding: 8px;
   fill: #056d68;
-  border-radius: 4px;
   transition: all 300ms ease-in-out;
   display: flex;
   align-items: center;
@@ -393,7 +399,7 @@ margin: 32px 0;
   cursor: pointer;
 }
 .social-item svg {
-  margin:0 32px;
+  margin:0 16px 0 0;
 }
 .social-item:hover {
   fill: #03403d;
@@ -441,6 +447,10 @@ margin: 32px 0;
 
   .brand-skill {
     font-size: 28px;
+  }
+  .introduction {
+    width: 800px;
+    justify-content: center;
   }
 }
 /* animation */
