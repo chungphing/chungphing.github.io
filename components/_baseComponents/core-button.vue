@@ -1,5 +1,5 @@
 <template>
-    <button @click="$emit('route')" class="core-button">{{ title }}</button>
+    <button @click="$emit('btnclick')" class="core-button">{{ title }}</button>
 </template>
 
 <script>
