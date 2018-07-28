@@ -43,7 +43,6 @@ body{
 }
 #__layout {
   width: 100%;
-  max-width: 800px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

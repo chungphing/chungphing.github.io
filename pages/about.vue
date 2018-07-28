@@ -2,7 +2,7 @@
   <section class="container">
     <div>
       <h1 class="title">
-        About page
+        About Me
       </h1>
     </div>
   </section>

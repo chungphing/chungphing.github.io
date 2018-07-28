@@ -1,6 +1,7 @@
 <template>
   <section class="content">
-    <div class="introduction">
+    <div class="wrapper">
+      <div class="introduction">
       <p class="title">
         Hi!
       </p>
@@ -10,7 +11,7 @@
       <p class="subtitle">
       I enjoy coffee and good looking websites.
       </p>
-      <div class="wrapper">
+      <div class="intro-wrapper">
         <span class="i-do">
               I Do
         </span>
@@ -23,13 +24,15 @@
         >
         </core-button>
     </div>
+    </div>
     <div class="scroll">
       <svg class="arrow" width="50" height="50" viewBox="0 0 25 13">
           <polyline points="0 0 12.31 12.31 24.19 0" stroke="white" stroke-width=".5"
       stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
       </svg>
     </div>
-    <div class="feature">
+    <div class="wrapper">
+      <div class="feature">
       <div class="recent-text"><p>Recent Works</p><p class="see-all">See all</p></div>
       <div class="recent-works">
         <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
@@ -40,42 +43,40 @@
         <p>Work Title</p></div>
         <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
         <p>Work Title</p></div>
-        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
-        <p>Work Title</p></div>
-        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
-        <p>Work Title</p></div>
-        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
-        <p>Work Title</p></div>
-        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
-        <p>Work Title</p></div>
-        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
-        <p>Work Title</p></div>
-        <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
-        <p>Work Title</p>
+        
+    </div>
+    </div>
+    </div>
+    <div class="values-wrapper">
+     <div class="values">
+        <div class="value-item design">
+        <p class="value-title">I Value Simplicity</p>
+        <p class="value-subtitle1">putting content first, style second</p>
+        <p class="value-subtitle2">because that's what matter</p>
+      </div>
+      <div class="value-item tech">
+        <p class="value-title">i love new technologies</p>
+        <p class="value-subtitle1">adapting to up-and-coming tools and technologies to improve today product</p>
+        <p class="value-subtitle2">normaly push forward in speed and functionality, normally...</p>
+      </div>
+      <div class="value-item dev">
+        <p class="value-title">i write for all platform</p>
+        <p class="value-subtitle1">responsive web design for all form factor</p>
+        <p class="value-subtitle2">desktop, tablet, phone, all screen matter</p>
+      </div>
+     </div>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact">
+        <span>contact by</span>
+        <span>or</span>
+        <div>
+          <core-button 
+            title="Get My Resume"
+            >
+          </core-button>
         </div>
     </div>
-    </div>
-    <div class="values">
-      <div class="design">
-        <p>I Value Simplicity</p>
-        <p>putting content first, style second</p>
-        <p>because that's what matter</p>
-      </div>
-      <div class="dev">
-        <p>i love new technologies</p>
-        <p>adapting to up-and-coming tools and technologies to improve today product</p>
-        <p>normaly push forward in speed and functionality, normally...</p>
-      </div>
-      <div class="dev">
-        <p>i write for all platform</p>
-        <p>responsive web design for all form factor</p>
-        <p>destop, tablet, phone, all screen matter</p>
-      </div>
-    </div>
-    <div class="contact">
-        <div>contact me</div>
-        <span>or</span>
-        <div>get my resume</div>
     </div>
   </section>
 </template>
@@ -99,7 +100,7 @@ export default {
   mounted: function () {
       setInterval(() => {
             this.index = this.index + 1;
-          }, 3000);
+          }, 1500);
     }
 }
 </script>
@@ -113,10 +114,12 @@ export default {
   align-items: flex-start;
 }
 .introduction{
+  width: 900px;
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-content: center;
   margin: 28px;
 }
 .title,
@@ -139,7 +142,7 @@ core-button,
   color: #fff;
   text-transform: uppercase;
 }
-.wrapper {
+.intro-wrapper {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -183,7 +186,7 @@ core-button,
 
 }
 .feature{
-  width: 100%;
+  width: 900px;
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -246,6 +249,80 @@ core-button,
   background:linear-gradient(0deg,rgba(63,176,255,1),rgba(63,176,255,1)), url('~/assets/sergey-zolkin-192937-unsplash.jpg') no-repeat; 
   background-blend-mode: darken;
   background-size: cover;
+}
+.wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.values-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: white;
+}
+.values{
+  margin: 28px 0;
+  width: 900px;
+ display: flex;
+ flex-direction: column;
+
+}
+.value-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 28px 0;
+}
+.value-title {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 4px;
+  margin-left: 0;
+}
+.value-subtitle1{
+  letter-spacing: 2px;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 2px;
+  margin-left: 0;
+}
+.value-subtitle2{
+  font-size: 28px;
+  text-transform: capitalize;
+  margin: 4px;
+  margin-left: 0;
+  font-family: 'Assistant', sans-serif;
+  font-weight: 300;
+}
+.contact-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: rgb(5, 161, 154);
+
+}
+.contact {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: 28px 0;
+  color: white;
+}
+.contact span {
+  margin: 4px;
+}
+.contact .core-button{
+  margin: 4px;
 }
 @media only screen and (max-width: 767px) {
   .introduction {

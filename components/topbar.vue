@@ -32,7 +32,7 @@ export default {
 .header{
     width: 100%;
     z-index: 10;
-    padding: 0 48px;
+    padding: 0 10px;
     margin: 18px 0;
     justify-content: center;
     align-items: center;
@@ -85,6 +85,7 @@ export default {
   display: none;
   z-index: 100;
   color: white;
+  align-self: flex-start;
 }
 .hamburger-box{
   color: white;
