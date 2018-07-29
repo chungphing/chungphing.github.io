@@ -22,6 +22,7 @@
        <core-button 
        v-on:btnclick="smoothScrollTo('contact')"
         title="Get in touch"
+        description="get in touch"
         >
         </core-button>
     </section>
@@ -131,6 +132,7 @@
         <core-button
             class="get-resume" 
             title="Get My Resume"
+            description="get my resume"
             >
           </core-button>
     </section>

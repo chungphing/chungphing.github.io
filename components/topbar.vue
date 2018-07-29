@@ -7,7 +7,7 @@
           <nuxt-link class="header-item" to="/portfolio">Portfolio</nuxt-link>
           <nuxt-link class="header-item" to="/blog">Blog</nuxt-link>
       </div>
-    <button class="hamburger hamburger--collapse" type="button">
+    <button aria-label="main menu" class="hamburger hamburger--collapse" type="button">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>

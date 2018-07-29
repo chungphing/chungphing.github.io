@@ -1,11 +1,11 @@
 <template>
-    <button @click="$emit('btnclick')" class="core-button">{{ title }}</button>
+    <button v-bind:aria-label="description" @click="$emit('btnclick')" class="core-button">{{ title }}</button>
 </template>
 
 <script>
 export default {
   name: 'cdev-button',
-  props: ['title', 'color']
+  props: ['title', 'color', 'description']
 }
 </script>
 <style lang="scss" scoped>
