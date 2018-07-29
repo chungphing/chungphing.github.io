@@ -59,16 +59,28 @@
         <p class="value-title">I Value Simplicity</p>
         <p class="value-subtitle1">putting content first, style second</p>
         <p class="value-subtitle2">fancy do not come at the cost of accessibility</p>
+        <div class="value-description">
+          <img class="showcase" src="~/assets/showcase/design-style.svg" alt="design style">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae eius soluta sapiente explicabo, veritatis in blanditiis saepe quam velit accusantium laudantium tempora odit eaque perferendis.</p>
+        </div>
       </div>
       <div class="value-item tech">
         <p class="value-title">i love new technologies</p>
         <p class="value-subtitle1">adapting to up-and-coming tools and technologies</p>
         <p class="value-subtitle2">to push forward in speed and functionality, normally...</p>
+        <div class="value-description">
+          <img class="showcase" src="~/assets/showcase/tech.svg" alt="design style">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae eius soluta sapiente explicabo, veritatis in blanditiis saepe quam velit accusantium laudantium tempora odit eaque perferendis.</p>
+        </div>
       </div>
       <div class="value-item dev">
         <p class="value-title">i write for all platform</p>
         <p class="value-subtitle1">responsive web design for all form factor</p>
         <p class="value-subtitle2">desktop, tablet, phone, all screen matter</p>
+        <div class="value-description">
+          <img class="showcase" src="~/assets/showcase/form-factor.svg" alt="design style">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae eius soluta sapiente explicabo, veritatis in blanditiis saepe quam velit accusantium laudantium tempora odit eaque perferendis.</p>
+        </div>
       </div>
      </section>
     </div>
@@ -146,7 +158,7 @@ export default {
   mounted: function () {
     setInterval(() => {
       this.index = this.index + 1;
-    }, 1500);
+    }, 3000);
   }, methods: {
     smoothScrollTo: function (section) {
       console.log('go to ' + section);
@@ -215,7 +227,7 @@ core-button,
   width: 100%;
   height: 100vh;
   z-index: -1;
-  background:linear-gradient(0deg,rgba(63,176,255,1),rgba(63,176,255,1)), url('~/assets/sergey-zolkin-192937-unsplash.jpg') no-repeat; 
+  background: url('~/assets/splash1.jpg') no-repeat; 
   background-blend-mode: darken;
   background-size: cover;
 }
@@ -364,6 +376,16 @@ core-button,
   font-family: 'Assistant', sans-serif;
   font-weight: 300;
 }
+.value-description{
+  display: flex;
+  flex-direction: row;
+  margin: 28px 0;
+  align-items: center;
+  justify-content: center;
+}
+.value-description * {
+  margin: 8px;
+}
 .contact-wrapper{
   display: flex;
   width: 100%;
@@ -420,7 +442,12 @@ margin: 32px 0;
   font-size: 14px;
   color: #043e3b
 }
-
+.showcase {
+  flex: 4 1 auto;
+  max-width: 400px;
+  width: 100%;
+  flex-basis: 400px;
+}
 @media only screen and (max-width: 767px) {
   .introduction {
     height: 60vh;
