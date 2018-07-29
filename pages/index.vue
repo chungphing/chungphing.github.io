@@ -37,19 +37,19 @@
       <section id="feature" class="feature">
         <div class="recent-text"><p>Recent Works</p><p class="see-all">See all</p></div>
         <div class="recent-works">
-          <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
           <p>Work Title</p></div>
-          <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
           <p>Work Title</p></div>
-          <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
           <p>Work Title</p></div>
-          <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
           <p>Work Title</p></div>
-          <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
           <p>Work Title</p></div>
-          <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
           <p>Work Title</p></div>
-          <div class="recent-item"><img src="http://via.placeholder.com/200x150" alt="thumbnail">
+          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
           <p>Work Title</p></div>
         </div>
     </section>
