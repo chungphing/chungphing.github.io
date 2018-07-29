@@ -22,10 +22,12 @@ module.exports = {
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Abel|Anton|Basic|Cairo|Ropa+Sans' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Assistant:200|Catamaran:200'}
     ]
   },
+//      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Abel|Anton|Basic|Cairo|Ropa+Sans' },
+
+
   // css: [
   //   // CSS file in the project
   //   '@/assets/styles/variables.scss'
