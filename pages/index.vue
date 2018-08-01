@@ -19,41 +19,39 @@
               <span class="brand-skill" v-for="number in [index]" v-bind:key="number">{{ skilllist[Math.abs(index) % skilllist.length] }}</span>
           </transition-group>
       </div>
-       <core-button 
+       <div>
+         <core-button 
        v-on:btnclick="smoothScrollTo('contact')"
         title="Get in touch"
         description="get in touch"
         >
         </core-button>
+       </div>
     </section>
     <div class="scroll">
-      <svg v-on:click="smoothScrollTo('feature')" class="arrow" width="50" height="50" viewBox="0 0 25 13">
+      <svg v-on:click="smoothScrollTo('values')" class="arrow" width="50" height="50" viewBox="0 0 25 13">
           <polyline points="0 0 12.31 12.31 24.19 0" stroke="white" stroke-width=".5"
       stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
       </svg>
     </div>
     </div>
-    <div class="wrapper">
+    <!-- <div class="wrapper">
       <section id="feature" class="feature">
         <div class="recent-text"><p>Recent Works</p><p class="see-all">See all</p></div>
         <div class="recent-works">
-          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
+          <div class="recent-item"><img src="https://via.placeholder.com/200x250" alt="thumbnail">
           <p>Work Title</p></div>
-          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
+          <div class="recent-item"><img src="https://via.placeholder.com/200x250" alt="thumbnail">
           <p>Work Title</p></div>
-          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
+          <div class="recent-item"><img src="https://via.placeholder.com/200x250" alt="thumbnail">
           <p>Work Title</p></div>
-          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
+          <div class="recent-item"><img src="https://via.placeholder.com/200x250" alt="thumbnail">
           <p>Work Title</p></div>
-          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
-          <p>Work Title</p></div>
-          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
-          <p>Work Title</p></div>
-          <div class="recent-item"><img src="https://via.placeholder.com/200x150" alt="thumbnail">
+          <div class="recent-item"><img src="https://via.placeholder.com/200x250" alt="thumbnail">
           <p>Work Title</p></div>
         </div>
     </section>
-    </div>
+    </div> -->
     <div class="values-wrapper">
      <section id="values" class="values">
         <div class="value-item design">
@@ -62,7 +60,7 @@
         <p class="value-subtitle2">fancy do not come at the cost of accessibility</p>
         <div class="value-description">
           <img class="showcase" src="~/assets/showcase/design-style.svg" alt="design style">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae eius soluta sapiente explicabo, veritatis in blanditiis saepe quam velit accusantium laudantium tempora odit eaque perferendis.</p>
+          <p class="showcase-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae eius soluta sapiente explicabo, veritatis in blanditiis saepe quam velit accusantium laudantium tempora odit eaque perferendis.</p>
         </div>
       </div>
       <div class="value-item tech">
@@ -71,7 +69,7 @@
         <p class="value-subtitle2">to push forward in speed and functionality, normally...</p>
         <div class="value-description">
           <img class="showcase" src="~/assets/showcase/tech.svg" alt="design style">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae eius soluta sapiente explicabo, veritatis in blanditiis saepe quam velit accusantium laudantium tempora odit eaque perferendis.</p>
+          <p  class="showcase-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae eius soluta sapiente explicabo, veritatis in blanditiis saepe quam velit accusantium laudantium tempora odit eaque perferendis.</p>
         </div>
       </div>
       <div class="value-item dev">
@@ -80,7 +78,7 @@
         <p class="value-subtitle2">desktop, tablet, phone, all screen matter</p>
         <div class="value-description">
           <img class="showcase" src="~/assets/showcase/form-factor.svg" alt="design style">
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae eius soluta sapiente explicabo, veritatis in blanditiis saepe quam velit accusantium laudantium tempora odit eaque perferendis.</p>
+          <p  class="showcase-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae eius soluta sapiente explicabo, veritatis in blanditiis saepe quam velit accusantium laudantium tempora odit eaque perferendis.</p>
         </div>
       </div>
      </section>
@@ -187,11 +185,13 @@ export default {
 }
 .introduction{
   color: #fff;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  margin: 28px;
+  margin: 0 28px;
+  max-width: 80rem;
 }
 .title,
 core-button,
@@ -201,12 +201,10 @@ core-button,
 }
 .title {
   font-size: 28px;
-  color: #adadad;
 }
 .subtitle {
   text-transform: capitalize;
   font-weight: bold;
-  color: #adadad;
   letter-spacing: 2px;
 }
 .subtitle #brand-name {
@@ -220,6 +218,14 @@ core-button,
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+.introduction-wrapper{
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .introduction::after{
   content: '';
   display: block;
@@ -227,7 +233,7 @@ core-button,
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 32rem;
   z-index: -1;
   background: url('~/assets/splash1.jpg') no-repeat; 
   background-blend-mode: darken;
@@ -256,27 +262,18 @@ core-button,
   margin: 0;
   font-size: 18px;
 }
-/* 
-.headline .--active {
-   transition: all 300ms linear;
-  display: inline;
-  transform: translateY(30px);
-} */
 .headline {
   text-transform: uppercase;
   letter-spacing: 6px;
   margin: 2px 0;
 }
-.core-button{
-  width: 200px;
 
-}
 .feature{
-  max-width: 900px;
+  max-width: 80rem;
   display: flex;
   flex-direction: column;
-  overflow: auto;
   padding: 8px;
+  width: 100%;
 }
 .feature > .recent-text{
   display: flex;
@@ -293,9 +290,10 @@ core-button,
   width: 100%;
   display: flex;
   flex-direction: row;
-  overflow: auto;
+  flex-wrap: wrap;
 }
 .recent-item {
+  margin: 8px;
   padding: 8px;
   transition: background-color 150ms linear;
 }
@@ -326,14 +324,7 @@ core-button,
   justify-content: center;
   align-content: center;
 }
-.introduction-wrapper{
-  width: 100%;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 .values-wrapper{
   width: 100%;
   display: flex;
@@ -343,7 +334,7 @@ core-button,
 }
 .values{
   margin: 28px 0;
-  max-width: 900px;
+  max-width: 80rem;
  display: flex;
  flex-direction: column;
 
@@ -382,7 +373,7 @@ core-button,
   display: flex;
   flex-direction: row;
   margin: 28px 0;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 .value-description * {
@@ -445,18 +436,21 @@ margin: 32px 0;
   color: #043e3b
 }
 .showcase {
-  flex: 4 1 auto;
   max-width: 400px;
   width: 100%;
-  flex-basis: 400px;
 }
+
 @media only screen and (max-width: 767px) {
-  .introduction {
-    height: 60vh;
-    justify-content: center;
+  .introduction-wrapper{
+    height: 90vh;
+  }
+  .introduction{
+    padding: 28px;
+  }
+  .introduction::after{
+    height: 100vh;
   }
   .scroll {
-    height: 20vh;
     display: flex;
     margin: 0;
     align-items: center;
@@ -465,6 +459,14 @@ margin: 32px 0;
   .core-button {
     width: 100%;
   }
+  .value-description{
+    flex-direction: column;
+    align-items: center;
+  }
+  .showcase {
+    max-width: 250px;
+  }
+  
 }
 @media only screen and (min-width: 800px) {
   .brand-slide{
@@ -477,9 +479,8 @@ margin: 32px 0;
   .brand-skill {
     font-size: 28px;
   }
-  .introduction {
-    width: 800px;
-    justify-content: center;
+  .core-button {
+    min-width: 200px;
   }
 }
 /* animation */

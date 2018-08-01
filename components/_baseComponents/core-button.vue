@@ -19,6 +19,8 @@ export default {
   background-color: white;
   color: black;
   transition: all 0.08s ease-in-out;
+    min-width: 200px;
+
 }
 
 .core-button:hover {
