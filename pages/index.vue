@@ -9,9 +9,9 @@
 <script>
 
 //import section components
-import Introduction from '~/components/sections/introduction'
-import About from '~/components/sections/about'
-import Projects from '~/components/sections/projects'
+import Introduction from '~/components/_sections/introduction'
+import About from '~/components/_sections/about'
+import Projects from '~/components/_sections/projects'
 
 export default {
   components: {
