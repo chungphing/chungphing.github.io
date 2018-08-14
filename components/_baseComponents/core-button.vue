@@ -17,9 +17,13 @@ export default {
   padding: 12px 32px;
   cursor: pointer;
   background-color: white;
-  color: black;
+  color: #318FD5;
+  font-weight: 600;
   transition: all 0.08s ease-in-out;
-    min-width: 200px;
+  min-width: 200px;
+  height: 40px;
+  margin: 10px 0;
+  border-radius: 4px;
 
 }
 

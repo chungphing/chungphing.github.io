@@ -17,6 +17,7 @@
   "dependencies": {
     "ajv": "^6.5.2",
     "hamburgers": "^0.9.3",
+    "jquery": "^3.3.1",
     "nuxt": "^1.0.0",
     "vue-smooth-scroll": "^1.0.13",
     "vue-smoothscroll": "^0.2.0"

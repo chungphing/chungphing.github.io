@@ -1,104 +1,167 @@
 <template>
-  <div class="header">
-    <router-link to="/"  class="header-branding"><span>Chungphing ly</span></router-link>
-    <div class="header-list">
-          <nuxt-link class="header-item" to="/about">About</nuxt-link>
-          <nuxt-link class="header-item" to="/resume">Resume</nuxt-link>
-          <nuxt-link class="header-item" to="/portfolio">Portfolio</nuxt-link>
-          <nuxt-link class="header-item" to="/blog">Blog</nuxt-link>
-      </div>
-    <button aria-label="main menu" class="hamburger hamburger--collapse" type="button">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
-
-  </div>
+  <section id="header">
+    <div class="header-container" :class="{sticky: position > 200}">
+        <nav class="header">
+            <ul class="header-list">
+              <li><a href="#introduction" class="header-branding" ><svg id="brand-logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><defs></defs><title>logo</title><rect class="0e5908c1-4a6d-431b-b506-6dba3d716f88" x="1.9" y="56.12" width="496.88" height="45.87"/><polyline class="59b20561-7fcc-4ff0-9f15-fa30ac27f0a2" points="209.45 349.71 0.78 171.92 0.8 230.48 250.77 443.88 251.15 261.94 499.23 443.88 499.19 385.31 209.14 171.89"/></svg></a></li>
+              <li><a href="#about" class="header-item">About</a></li>
+              <li><a href="#develop" class="header-item">Develop</a></li>
+              <li><a href="#design" class="header-item">Design</a></li>
+              <li><a href="#contact" class="header-item">Contact</a></li>
+              <li><button aria-label="main menu" class="hamburger hamburger--collapse" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button></li>
+            </ul>
+        </nav>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'Topbar',
+  name: "Topbar",
   props: {
     showTopMenu: true
+  },
+  data() {
+    return {
+      position: 0
+    }
+  },
+  created () {
+    if (process.browser) {
+      var self = this;
+      document.onscroll = function(e){
+        self.position = document.documentElement.scrollTop || document.body.scrollTop;
+      }
+    }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-@import '~/assets/styles/hamburgers.css';
-/*start header */
-.header{
-    width: 100%;
-    z-index: 10;
-    padding: 0 10px;
-    margin: 18px 0;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
+<style lang="scss" scoped>
+@import "~/assets/styles/hamburgers.css";
+@import "~/assets/styles/variables.scss";
+@import "~/assets/styles/mixins.scss";
+#brand-logo{
+  fill: #ffffff;
 }
-.header-branding{
+/*start header */
+.header-container{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+}
+
+
+.header {
+  max-width: 80rem;
+  width: 100%;
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  z-index: 10;
+  padding: 0 10px;
+  margin: 30px auto;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  transition: all 300ms ease-in-out;
+
+}
+.header-branding {
   font-weight: bold;
   font-size: 1rem;
   letter-spacing: 3px;
   text-align: center;
+  color: $blue;
 }
 .header-item {
-    font-size: .8rem;
-    vertical-align: middle;
-    letter-spacing: 2px;
-    transition: box-shadow .1s ease-in-out;
+  vertical-align: middle;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  color: $text;
+  transition: all 300ms ease-in-out;
+
 }
-.header-item:hover{
-    color: #adadad;
-    cursor: pointer;
-    box-shadow: inset 0px -1px 0px 0px #128ee0;
-}
-.active-item {
-    color: #fff;
+.header-item:hover {
+  color: #2d6fff;
+  letter-spacing: 3px;
+  cursor: pointer;
 }
 
-.header-list{
-  align-items: center; 
+.sticky{
+  background-color: #fff;
+  transition: all 300ms ease-in-out;
+  border-bottom: 1px solid #dfdede;
 }
-.header-list a{
-      padding: 10px 18px;
+.sticky .header-item{
+  color: $grey;
 }
-.header-branding > *{
+.sticky .header-item:hover{
+  color: darken($grey, 20%);
+}
+.sticky .header{
+  margin: 2px auto;
+}
+.sticky #brand-logo{
+  fill: $grey;
+}
+.active-item {
+  color: #fff;
+}
+
+.header-list {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  align-items: center;
+}
+.header-list li:first-child{
+  margin-right: auto;
+}
+.header-list li {
+  margin: 0;
+}
+.header-list a {
+  padding: 10px 18px;
+}
+.header-branding > * {
   vertical-align: middle;
 }
 .header-branding {
-  margin: 6px;
+  padding: 0;
 }
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.25s ease-out;
 }
 
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 
-.hamburger{
+.hamburger {
   display: none;
   z-index: 100;
   color: white;
   align-self: flex-start;
 }
-.hamburger-box{
-  color: white;
-}
-.header,
-.header-branding,
-.header-item{
+.hamburger-box {
   color: white;
 }
 
 @media only screen and (max-width: 767px) {
-  .header-list,
-  .header-branding {
+  .header-item {
     display: none;
   }
   .hamburger {

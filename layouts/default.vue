@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('~/assets/styles/variables.scss');
+@import "~/assets/styles/variables.scss";
 img {
   width: 100%;
   height: auto;
@@ -25,27 +25,22 @@ a {
   text-decoration: none;
 }
 body{
-  display: flex;
-  width: 100%;
   box-sizing: border-box;
   margin: 0 ;
   padding: 0;
 }
+p{
+  font-family: 'Avenir', 'Dosis', sans-serif;
+}
 /*end fix*/
 #__nuxt {
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 300;
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 #__layout {
-  width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   padding: 0;
   box-sizing: border-box;
 }
@@ -54,7 +49,6 @@ body{
   box-sizing: border-box;
 }
 .container,
-.content,
 .header,
 .header-list,
 .footer {
@@ -63,12 +57,31 @@ body{
 .container{
   justify-content: center;
   display: flex;
+  max-width: 1180px;
+  width: 90%;
   flex-direction: column;
   padding-top: 28px;
   padding-bottom: 28px;
+  margin: 0 auto;
 }
-.content{
-  flex: 1;
+section{
+    display: -webkit-box
+}
+//move soon
+.section-heading {
+    text-align: center;
+    color: $blue;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin: 68px;
+}
+.section-subheading {
+    text-align: center;
+    color: $grey;
+    text-transform: capitalize;
+    font-weight: normal;
+    letter-spacing: 1px;
 }
 </style>
 
