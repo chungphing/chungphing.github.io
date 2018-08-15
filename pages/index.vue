@@ -9,7 +9,7 @@
 <script>
 
 //import section components
-import Introduction from '~/components/_sections/introduction'
+import Introduction from '~/components/_sections/Introduction'
 import About from '~/components/_sections/About'
 import Projects from '~/components/_sections/Projects'
 
