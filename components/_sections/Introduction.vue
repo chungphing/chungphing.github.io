@@ -59,7 +59,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background: url('~/assets/splash1.jpg') no-repeat; 
+  background: url('/splash1.jpg') no-repeat; 
   background-size: cover;
   height: 30rem;
 }
