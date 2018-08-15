@@ -4,7 +4,7 @@
             <h1 class="about-header section-heading">about</h1>
                 <div class="about-card">
                     <div class="about-card-portrait">
-                        <img src="/img/portrait.png" alt="portrait" class="about-card-portrait-img">
+                        <img src="~/assets/img/portrait.png" alt="portrait" class="about-card-portrait-img">
                     </div>
                     <div class="about-card-detail">
                         <div class="about-card-detail-text">
