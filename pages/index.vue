@@ -10,8 +10,8 @@
 
 //import section components
 import Introduction from '~/components/_sections/introduction'
-import About from '~/components/_sections/about'
-import Projects from '~/components/_sections/projects'
+import About from '~/components/_sections/About'
+import Projects from '~/components/_sections/Projects'
 
 export default {
   components: {
