@@ -58,6 +58,7 @@ export default {
   justify-content: center;
   align-content: center;
   background: url('~/assets/splash1.jpg') no-repeat; 
+  background-position: right center; 
   background-size: cover;
   height: 30rem;
 
