@@ -65,7 +65,10 @@ p{
   margin: 0 auto;
 }
 section{
-    display: -webkit-box
+    display: -webkit-box;
+    display: flex;
+  flex-direction: column;
+
 }
 //move soon
 .section-heading {
@@ -74,7 +77,7 @@ section{
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: 1px;
-    margin: 68px;
+    margin: 3rem;
 }
 .section-subheading {
     text-align: center;

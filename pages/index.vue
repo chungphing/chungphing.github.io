@@ -2,6 +2,8 @@
   <div class="content">
     <Introduction></Introduction>
     <About></About>
+    <Design></Design>
+    <Develop></Develop>
     <Projects></Projects>
   </div>
 </template>
@@ -12,12 +14,16 @@
 import Introduction from '~/components/_sections/Introduction'
 import About from '~/components/_sections/About'
 import Projects from '~/components/_sections/Projects'
+import Design from '~/components/_sections/Design'
+import Develop from '~/components/_sections/Develop'
 
 export default {
   components: {
     Introduction,
     About,
-    Projects
+    Projects,
+    Design,
+    Develop
   },
   data: function () {
     return {
