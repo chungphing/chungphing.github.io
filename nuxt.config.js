@@ -9,6 +9,9 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  },
   head: {
     title: 'chungphing',
     htmlAttrs: {
@@ -25,7 +28,7 @@ module.exports = {
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Dosis'}
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Open+Sans'}
     ]
   },
 
@@ -58,6 +61,8 @@ module.exports = {
       }
     }
   },
-  plugins: ['~/plugins/vueSmoothScroll']
+  plugins: [
+    { src: '~/plugins/vue-smooth-scroll', ssr: false }
+  ]
 }
 

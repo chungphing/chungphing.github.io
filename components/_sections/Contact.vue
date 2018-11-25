@@ -1,25 +1,25 @@
 <template>
     <div class="container">
-        <section id="about">
-            <div class="about">
-                <h1 class="about-header">about</h1>
-                <div class="about-card">
-                    <img src="#" alt="portrait" class="about-card-portrait">
-                    <div class="about-card-detail">
-                        <div class="about-card-detail-text">
+        <section id="contact">
+            <div class="contact">
+                <h1 class="contact-header">Contact</h1>
+                <div class="contact-card">
+                    <img src="#" alt="portrait" class="contact-card-portrait">
+                    <div class="contact-card-detail">
+                        <div class="contact-card-detail-text">
                             
                         </div>
                     </div>
                 </div>
-                <h1 class="about-skill-header">what i can do</h1>
-                <div class="about-skill-card"></div>
+                <h1 class="contact-skill-header">what i can do</h1>
+                <div class="contact-skill-card"></div>
             </div>
         </section>
     </div>
 </template>
 <script>
 export default {
-    name: 'About'
+    name: 'Contact'
 }
 </script>
 <style lang="scss">

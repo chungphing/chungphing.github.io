@@ -1,30 +1,40 @@
 <template>
-    <div class="container">
+    <div class="container-about">
         <section id="about">
             <h1 class="about-header section-heading">about</h1>
                 <div class="about-card">
-                    <div class="about-card-portrait">
-                        <img src="~/assets/img/portrait.png" alt="portrait" class="about-card-portrait-img">
-                    </div>
                     <div class="about-card-detail">
                         <div class="about-card-detail-text">
-                            <p>I’m currently a web developer and mobile developer based in Phnom Penh, Cambodia</p>
+                            <p>Working as a web developer, I always look for opportunity to tryout new technologies and tools. I value adaptability as the most important skill for a programmer. </p>
                         </div>
                         <div class="about-card-detail-text">
-                            <p>I inspired to create beautiful and functional website and app. But my first priority is always making sure that the most standout aspect is the contents itself.</p>
+                            <p>From brochure website to commercial web application, I am excited to bringing new idea or to collaborate with other to build products that i can be proud of.</p>
                         </div>
                         <div class="about-card-detail-text">
-                            <p>Other than Web and mobile, I also like graphic design and animation. I feel like motion graphic in general is undervalue in our local communities</p>
+                            <p>For the past few years, I'm currently a web developer for Allweb inc. Before that, I was an Android Developer for Optistech, where i was building application connected online and supported multiple screen sizes .</p>
                         </div>
                         <div class="about-social">
-                            <div class="about-social-item">
-                                <img src="~/assets/icon/facebook-logo.svg" alt="facebook">
+                            <div class="about-card-portrait">
+                                <img src="~/assets/img/portrait.png" alt="portrait" class="about-card-portrait-img">
                             </div>
-                            <div class="about-social-item">
-                                <img src="~/assets/icon/linkedin-logo.svg" alt="linkedin">
+                            <div class="about-description">
+                                <h3>Chungphing Ly</h3>
+                                <p>Born 1997</p>
+                                <p>Work in Phnom Penh</p>
                             </div>
-                            <div class="about-social-item">
-                                <img src="~/assets/icon/github-logo.svg" alt="github">
+                            <div class="about-social-container">
+                                <div class="about-social-item">
+                                    <img src="~/assets/icon/facebook-logo.svg" alt="facebook">
+                                </div>
+                                <div class="about-social-item">
+                                    <img src="~/assets/icon/instagram-logo.svg" alt="github">
+                                </div>
+                                <!-- <div class="about-social-item">
+                                        <img src="~/assets/icon/github-logo.svg" alt="github">
+                                </div> -->
+                                <div class="about-social-item">
+                                    <img src="~/assets/icon/linkedin-logo.svg" alt="linkedin">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -47,33 +57,50 @@ export default {
       flex-direction: column;
       align-items: center;
   }
+  .about-card-detail-text {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 15px;
+  }
 }
 .about-card-portrait {
-  width: 300px;
+  width: 180px;
   margin: 20px 50px;
 }
 .about-social{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     @media only screen and (max-width: 767px) {
       justify-content: center;
-
+  }
+  .about-social-container{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
   }
   .about-social-item{
     width: 25px;
     margin: 12px;
     cursor: pointer;
     @media only screen and (max-width: 767px) {
-      width: 50px;
-      margin: 12px auto;
+      width: 25px;
+      margin: 12px;
     }
     &:first-child{
-      margin-left: 0;
       @media only screen and (max-width: 767px) {
-        margin: 12px auto;
+        //margin: 12px auto;
       }
     }
     
+  }
+  .about-description {
+      display: column;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
   }
 }
 

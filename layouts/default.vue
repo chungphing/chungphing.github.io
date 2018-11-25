@@ -1,15 +1,15 @@
 <template>
   <div>
-    <topbar></topbar>
+    <navigation></navigation>
     <nuxt/>
   </div>
 </template>
 <script>
-import Topbar from '~/components/topbar.vue'
+import Navigation from '~/components/Navigation.vue'
 
 export default {
    components: {
-    Topbar
+    Navigation
   }
 }
 </script>
@@ -28,13 +28,15 @@ body{
   box-sizing: border-box;
   margin: 0 ;
   padding: 0;
+  background: url('~/assets/splash1.jpg') no-repeat; 
+  background-size: 100% 600px;
 }
 p{
   font-family: 'Avenir', 'Dosis', sans-serif;
 }
 /*end fix*/
 #__nuxt {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Avenir', 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 300;
@@ -60,16 +62,33 @@ p{
   max-width: 1180px;
   width: 90%;
   flex-direction: column;
-  padding-top: 28px;
-  padding-bottom: 28px;
   margin: 0 auto;
+}
+.container-about {
+   background-color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 auto;
+    border-radius: 30px 30px 0 0;
+    margin-top: 40px;
+    box-shadow: 0 -5px 10px -6px #616161;
+      transition: all 300ms ease-in-out;
 }
 section{
     display: -webkit-box;
     display: flex;
   flex-direction: column;
+   //centering about
+  align-items: center;
 
 }
+// section#about {
+//   //centering about
+//   align-items: center;
+// }
 //move soon
 .section-heading {
     text-align: center;
@@ -86,5 +105,6 @@ section{
     font-weight: normal;
     letter-spacing: 1px;
 }
+
 </style>
 
