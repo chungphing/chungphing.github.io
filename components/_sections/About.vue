@@ -15,7 +15,7 @@
                         </div>
                         <div class="about-social">
                             <div class="about-card-portrait">
-                                <img src="~/assets/img/portrait.png" alt="portrait" class="about-card-portrait-img">
+                                <img src="~/assets/img/portrait.jpg" alt="portrait" class="about-card-portrait-img">
                             </div>
                             <div class="about-description">
                                 <h3>Chungphing Ly</h3>
