@@ -29,7 +29,7 @@ body{
   margin: 0 ;
   padding: 0;
   background: url('~/assets/splash1.jpg') no-repeat; 
-  background-size: 100% 600px;
+  background-size: contain;
 }
 p{
   font-family: 'Avenir', 'Dosis', sans-serif;
