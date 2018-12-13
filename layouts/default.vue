@@ -32,11 +32,11 @@ body{
   background-size: contain;
 }
 p{
-  font-family: 'Avenir', 'Dosis', sans-serif;
+  font-family: 'Slabo 27px', 'Dosis', sans-serif;
 }
 /*end fix*/
 #__nuxt {
-  font-family: 'Avenir', 'Dosis', sans-serif;
+  font-family: 'Slabo 27px', 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 300;

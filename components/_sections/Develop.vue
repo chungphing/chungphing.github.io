@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<section id="develop">
-		<h1 class="develop-header section-heading">Develop</h1>
+		<h1 class="develop-header section-heading">Skills</h1>
 		<h1 class="develop-skill-header section-subheading">Back End Stack</h1>
 			<div class="develop-skill-card">
 					<div class="develop-skill-card-item">
@@ -28,9 +28,6 @@
 							</div>
 							<h1>Android</h1>
 					</div>
-			</div>
-			<div class="develop-skill-note">
-					<p>For the average joe, it’s mean i am adaptable. I choose which technologies to use by value depend on situation</p>
 			</div>
 		</section>
 	</div>

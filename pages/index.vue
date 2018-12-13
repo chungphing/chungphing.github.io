@@ -2,9 +2,7 @@
   <div class="content">
     <CustomHeader></CustomHeader>
     <About></About>
-    <Design></Design>
     <Develop></Develop>
-    <Projects></Projects>
   </div>
 </template>
 

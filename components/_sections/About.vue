@@ -4,6 +4,22 @@
             <h1 class="about-header section-heading">about</h1>
                 <div class="about-card">
                     <div class="about-card-detail">
+                        <div class="about-social">
+                            <div class="about-card-portrait">
+                                <img src="~/assets/img/portrait.png" alt="portrait" class="about-card-portrait-img">
+                            </div>
+                            <div class="about-social-container">
+                                <div class="about-social-item">
+                                    <a href="https://www.facebook.com/chungphing"><img src="~/assets/icon/facebook-logo.svg" alt="facebook"></a>
+                                </div>
+                                <div class="about-social-item">
+                                    <a href="https://www.instagram.com/chungphingly/"><img src="~/assets/icon/instagram-logo.svg" alt="github"></a>
+                                </div>
+                                <div class="about-social-item">
+                                    <a href="https://www.linkedin.com/in/chungphing"><img src="~/assets/icon/linkedin-logo.svg" alt="linkedin"></a>
+                                </div>
+                            </div>
+                        </div>
                         <div class="about-card-detail-text">
                             <p>Working as a web developer, I always look for opportunity to tryout new technologies and tools. I value adaptability as the most important skill for a programmer. </p>
                         </div>
@@ -12,30 +28,6 @@
                         </div>
                         <div class="about-card-detail-text">
                             <p>For the past few years, I'm currently a web developer for Allweb inc. Before that, I was an Android Developer for Optistech, where i was building application connected online and supported multiple screen sizes .</p>
-                        </div>
-                        <div class="about-social">
-                            <div class="about-card-portrait">
-                                <img src="~/assets/img/portrait.jpg" alt="portrait" class="about-card-portrait-img">
-                            </div>
-                            <div class="about-description">
-                                <h3>Chungphing Ly</h3>
-                                <p>Born 1997</p>
-                                <p>Work in Phnom Penh</p>
-                            </div>
-                            <div class="about-social-container">
-                                <div class="about-social-item">
-                                    <img src="~/assets/icon/facebook-logo.svg" alt="facebook">
-                                </div>
-                                <div class="about-social-item">
-                                    <img src="~/assets/icon/instagram-logo.svg" alt="github">
-                                </div>
-                                <!-- <div class="about-social-item">
-                                        <img src="~/assets/icon/github-logo.svg" alt="github">
-                                </div> -->
-                                <div class="about-social-item">
-                                    <img src="~/assets/icon/linkedin-logo.svg" alt="linkedin">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -73,13 +65,13 @@ export default {
     align-items: center;
     @media only screen and (max-width: 767px) {
       justify-content: center;
-  }
-  .about-social-container{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-  }
+    }
+    .about-social-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
   .about-social-item{
     width: 25px;
     margin: 12px;

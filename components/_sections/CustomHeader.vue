@@ -7,9 +7,6 @@
                     <span class="i-do">
                         Web Designer / Developer.
                     </span>
-                    <!-- <transition-group  tag="div" class="brand-slide" name="slide">
-                        <span class="brand-skill" v-for="number in [index]" v-bind:key="number">{{ skilllist[Math.abs(index) % skilllist.length] }}</span>
-                    </transition-group> -->
                 </div>
                 <a v-smooth-scroll="{duration:500, offset: -50}" href="#about" aria-label="description" class="core-button" >Learn More</a>
 
