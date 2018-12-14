@@ -8,8 +8,11 @@
                         Web Designer / Developer.
                     </span>
                 </div>
-                <a v-smooth-scroll="{duration:500, offset: -50}" href="#about" aria-label="description" class="core-button" >Learn More</a>
-
+                <a 
+                  v-smooth-scroll="{duration:500, offset: -50}" 
+                  href="#about" 
+                  aria-label="description" 
+                  class="core-button" >Learn More</a>
             </div>
     </section>
 </template>
@@ -21,16 +24,6 @@ export default {
   name: "CustomHeader",
   components: {
     CoreButton
-  }, methods: {
-    onLearnmore: function () {
-        // let el = document.querySelector('#about')
-        // el.scrollIntoView({ 
-        //   behavior: 'smooth',
-        //   block: 'start',
-        //   inline: 'start',
-        // })      
-        
-    }
   }
 };
 </script>
@@ -41,7 +34,11 @@ export default {
   font-family: 'Open Sans', sans-serif;
   justify-content: center;
   align-content: center;
-  height: 30rem;
+  background: url('~/assets/splash1.jpg') no-repeat; 
+  background-size: cover;
+  .container{
+    margin: 150px 0;
+  }
 
   @media only screen and (max-width: 767px) {
     padding: 28px;
@@ -49,11 +46,15 @@ export default {
     .core-button {
       width: 100%;
     }
+    .container{
+      //margin: 0px 0;
+    }
   }
   @media only screen and (min-width: 800px) {
     .core-button {
       min-width: 200px;
     }
+    
   }
 }
 .header-greeting,
@@ -115,21 +116,24 @@ core-button,
   font-weight: bold;
   padding: 5px 15px;
   cursor: pointer;
-  background-color: #318FD5;
+  background-color: $blue;
   color: $text;
   height: 40px;
   width: 80px;
   margin: 30px 0;
   border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(50,50,50,.5);
   transition: all 150ms ease-in-out;
 }
 
 .core-button:hover {
-  background-color: #128de0af;
+  background-color: lighten($blue, 2%);
+  box-shadow: 0px 4px 10px rgba(50,50,50,0.5);
+
   color: white;
 }
 .core-button:active {
-  background-color: #2573ad;
+  background-color: darken($blue, 2%);
   color: white;
 }
 </style>

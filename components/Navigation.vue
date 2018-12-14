@@ -66,7 +66,7 @@ export default {
   max-width: 80rem;
   width: 100%;
   text-align: center;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   z-index: 10;
   padding: 0 10px;
   margin: 30px auto;
@@ -100,7 +100,7 @@ export default {
 
     // }
     &:hover {
-      color: $active;
+      color: $blue;
       cursor: pointer;
       &::after{
         width: 100%;

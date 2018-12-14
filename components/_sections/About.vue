@@ -1,5 +1,5 @@
 <template>
-    <div class="container-about">
+    <div class="container">
         <section id="about">
             <h1 class="about-header section-heading">about</h1>
                 <div class="about-card">
