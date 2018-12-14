@@ -3,11 +3,7 @@
             <div class="container">
                 <p class="header-greeting"> Hello,</p>
                 <p class="header-name">I'm <span id="brand-name">Chungphing Ly</span></p>
-                <div class="header-work">
-                    <span class="i-do">
-                        Web Designer / Developer.
-                    </span>
-                </div>
+                <div class="header-work">Web Designer / Developer.</div>
                 <a 
                   v-smooth-scroll="{duration:500, offset: -50}" 
                   href="#about" 
@@ -61,18 +57,21 @@ export default {
 core-button,
 .header-name,
 .headline{
-  margin: 2px;
+  margin: 2px 2px 2px 0;
 }
 .header-greeting {
   font-weight: bold;
   font-size: 1.5rem;
   font-family: inherit;
+  color: $text;
+
 }
 .header-name {
   font-family: inherit;
   text-transform: capitalize;
   font-weight: bold;
   font-size: 1.5rem;
+  color: $text;
 
   #brand-name {
     text-transform: uppercase;
@@ -86,6 +85,8 @@ core-button,
   width: 100%;
   letter-spacing: 1px;
   font-family: inherit;
+  color: $text;
+
   @media only screen and (min-width: 800px) {
     .i-do {
      font-size: 1.5rem;

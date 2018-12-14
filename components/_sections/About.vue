@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <section id="about">
-            <h1 class="about-header section-heading">about</h1>
+            <h1 class="about-header section-heading">about me</h1>
                 <div class="about-card">
                     <div class="about-card-detail">
                         <div class="about-social">
@@ -18,16 +18,19 @@
                                 <div class="about-social-item">
                                     <a href="https://www.linkedin.com/in/chungphing"><img src="~/assets/icon/linkedin-logo.svg" alt="linkedin"></a>
                                 </div>
+                                <div class="about-social-item">
+                                    <a href="https://github.com/chungphing"><img src="~/assets/icon/github-logo.svg" alt="linkedin"></a>
+                                </div>
+                            </div>
+                            <div class="about-social-email">
+                                Email: <a href="mailto:chungphing@gmail.com">chungphing@gmail.com</a>
                             </div>
                         </div>
                         <div class="about-card-detail-text">
-                            <p>Working as a web developer, I always look for opportunity to tryout new technologies and tools. I value adaptability as the most important skill for a programmer. </p>
+                            <p>I'm a Web Developer based in Phnom Penh. From brochure website to commercial web application, I am excited to bringing new idea to life.</p>
                         </div>
                         <div class="about-card-detail-text">
-                            <p>From brochure website to commercial web application, I am excited to bringing new idea or to collaborate with other to build products that i can be proud of.</p>
-                        </div>
-                        <div class="about-card-detail-text">
-                            <p>For the past few years, I'm currently a web developer for Allweb inc. Before that, I was an Android Developer for Optistech, where i was building application connected online and supported multiple screen sizes .</p>
+                            <p>Throughout the years, I have worked on multiple platforms / frameworks with Node.js, React, Redux, Vue.js, Laravel, Codeigniter, Wordpress, and Android app development with Java and React Native</p>
                         </div>
                     </div>
                 </div>
@@ -50,9 +53,9 @@ export default {
       align-items: center;
   }
   .about-card-detail-text {
-      text-align: center;
       max-width: 900px;
       margin: 0 15px;
+      line-height: 1.5;
   }
 }
 .about-card-portrait {
@@ -93,6 +96,13 @@ export default {
       justify-content: center;
       align-items: center;
       text-align: center;
+  }
+  .about-social-email{
+      margin: 5px;
+      a{
+          color: $blue;
+          font-weight:600;
+      }
   }
 }
 

@@ -30,17 +30,17 @@ body{
   padding: 0;
 }
 p{
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #353535;
 }
 h1{
   font-family: 'Open Sans', sans-serif;
 }
 /*end fix*/
 #__nuxt {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 300;
 }
 #__layout {
   min-height: 100vh;

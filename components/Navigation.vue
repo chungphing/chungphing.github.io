@@ -7,12 +7,13 @@
               <li><a href="#about" v-smooth-scroll="{duration:500, offset: -50}" class="navigation-item">About</a></li>
               <li><a href="#develop" v-smooth-scroll="{duration:500, offset: -50}" class="navigation-item">Skills</a></li>
               <li><a href="#project" v-smooth-scroll="{duration:500, offset: -50}" class="navigation-item">Works</a></li>
-              <!-- <li><a href="#contact" v-smooth-scroll="{duration:500, offset: -50}" class="navigation-item">Contact</a></li> -->
-              <li><button aria-label="main menu" class="hamburger hamburger--collapse" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button></li>
+              <!-- <li>
+                <button aria-label="main menu" class="hamburger hamburger--collapse" type="button">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </button>
+              </li> -->
             </ul>
         </nav>
     </div>
