@@ -10,8 +10,24 @@ import Navigation from '~/components/Navigation.vue'
 export default {
    components: {
     Navigation
-  }
+  },
+  mounted: function () {
+  // setInterval(() => {
+  //   this.index = this.index + 1;
+  // }, 3000);
+  if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
 }
+  
+}
+
 </script>
 
 <style lang="scss">

@@ -15,7 +15,6 @@ import Contact from '~/components/_sections/Contact'
 import Projects from '~/components/_sections/Projects'
 import Design from '~/components/_sections/Design'
 import Develop from '~/components/_sections/Develop'
-
 export default {
   components: {
     CustomHeader,
@@ -39,6 +38,15 @@ export default {
     // setInterval(() => {
     //   this.index = this.index + 1;
     // }, 3000);
+    // if (window.netlifyIdentity) {
+    //     window.netlifyIdentity.on("init", user => {
+    //       if (!user) {
+    //         window.netlifyIdentity.on("login", () => {
+    //           document.location.href = "/admin/";
+    //         });
+    //       }
+    //     });
+    //   }
   }
 } 
 </script>
