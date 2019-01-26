@@ -1,25 +1,40 @@
 <template>
     <section id="header">
             <div class="container">
-                <p class="header-greeting"> Hello,</p>
-                <p class="header-name">I'm <span id="brand-name">Chungphing Ly</span></p>
-                <div class="header-work">Web Designer / Developer.</div>
-                <a 
-                  v-smooth-scroll="{duration:500, offset: -50}" 
-                  href="#about" 
-                  aria-label="description" 
-                  class="core-button" >Learn More</a>
+                <div class="hero">
+                  <p class="hero-title dark"> Hello,</p>
+                  <p class="hero-title dark">I'm <span id="brand-name">Chungphing Ly</span></p>
+                  <div class="header-subtitle dark">I am a web developer, I guess...</div>
+                  <a 
+                    v-smooth-scroll="{duration:500, offset: -50}" 
+                    href="#about" 
+                    aria-label="description" 
+                    class="button-prime" >Learn More</a>
+                </div>
             </div>
+            <svg 
+                    id="background-art" 
+                    data-name="Layer 1" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 500 500"
+                    width="1200px"
+                    height="500px">
+                      <defs></defs>
+                      <rect class="0e5908c1-4a6d-431b-b506-6dba3d716f88" x="1.9" y="56.12" width="496.88" height="45.87"/>
+                      <polyline 
+                        width="496.88" height="45.87"
+                        class="59b20561-7fcc-4ff0-9f15-fa30ac27f0a2" 
+                        points="209.45 349.71 0.78 171.92 0.8 230.48 250.77 443.88 251.15 261.94 499.23 443.88 499.19 385.31 209.14 171.89"/>
+                    </svg>
     </section>
 </template>
 <script>
 //import core components
-import CoreButton from "~/components/_baseComponents/core-button";
 
 export default {
   name: "CustomHeader",
   components: {
-    CoreButton
+    
   }
 };
 </script>
@@ -30,68 +45,54 @@ export default {
   font-family: 'Open Sans', sans-serif;
   justify-content: center;
   align-content: center;
-  background: url('~/assets/splash1.jpg') no-repeat; 
-  background-size: cover;
+  position: relative;
+  overflow: hidden;
   .container{
-    margin: 150px 0;
+    margin: 100px 0;
   }
-
+  .hero {
+    width: 250px;
+    margin: 46px 0;
+  }
   @media only screen and (max-width: 767px) {
     padding: 28px;
     height: 100vh;
-    .core-button {
+    .button-prime {
       width: 100%;
-    }
-    .container{
-      //margin: 0px 0;
     }
   }
   @media only screen and (min-width: 800px) {
-    .core-button {
+    .button-prime {
       min-width: 200px;
     }
     
   }
 }
 .header-greeting,
-core-button,
 .header-name,
-.headline{
+.hero-title{
   margin: 2px 2px 2px 0;
 }
-.header-greeting {
+.hero-title {
   font-weight: bold;
   font-size: 1.5rem;
   font-family: inherit;
-  color: $text;
-
-}
-.header-name {
+  //color: $text;
   font-family: inherit;
   text-transform: capitalize;
   font-weight: bold;
   font-size: 1.5rem;
-  color: $text;
-
   #brand-name {
     text-transform: uppercase;
     font-family: inherit;
     font-weight: bolder;
   }
 }
-.header-work {
+.hero-subtitle {
   display: flex;
   flex-direction: row;
   width: 100%;
-  letter-spacing: 1px;
   font-family: inherit;
-  color: $text;
-
-  @media only screen and (min-width: 800px) {
-    .i-do {
-     font-size: 1.5rem;
-    }
-  }
 }
 /* animation */
 .slide-leave-active,
@@ -106,7 +107,7 @@ core-button,
 }
 
 
-.core-button{ 
+.button-prime{ 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,22 +121,29 @@ core-button,
   background-color: $blue;
   color: $text;
   height: 40px;
-  width: 80px;
-  margin: 30px 0;
+  margin: 14px 0;
   border-radius: 2px;
-  box-shadow: 0px 2px 2px rgba(50,50,50,.5);
   transition: all 150ms ease-in-out;
 }
 
-.core-button:hover {
-  background-color: lighten($blue, 2%);
-  box-shadow: 0px 4px 10px rgba(50,50,50,0.5);
+.button-prime:hover {
+  background-color: darken($blue, 5%);
+  transform: scale(1.01);
+  color: $black;
+}
+.button-prime:active {
+  background-color: darken($blue, 10%);
+}
 
-  color: white;
+#background-art {
+  fill: $blue;
+  opacity: .5;
+  position: absolute;
+  bottom: -150px;
+  right: -100px;
+  z-index: -1;
+  pointer-events: none;
 }
-.core-button:active {
-  background-color: darken($blue, 2%);
-  color: white;
-}
+
 </style>
 

@@ -1,129 +1,140 @@
 <template>
-	<div class="container">
-		<section id="projects">
-				<h1 class="projects-header section-heading">Works</h1>
-				<div class="projects-cards-grid">
-					<!-- start card -->
-
-
-				<div class="projects-card">
-					<div class="projects-card-thumb">
-						<img src="~/assets/thumb.png" alt="portrait" class="projects-card-portrait-img">
-					</div>
-					<div class="projects-card-detail">
-						<div class="projects-card-detail-text">
-
-						</div>
-					</div>
-				</div>
-
-				<div class="projects-card">
-					<div class="projects-card-thumb">
-						<img src="~/assets/thumb.png" alt="portrait" class="projects-card-portrait-img">
-					</div>
-					<div class="projects-card-detail">
-						<div class="projects-card-detail-text">
-
-						</div>
-					</div>
-				</div>
-
-				<div class="projects-card">
-					<div class="projects-card-thumb">
-						<img src="~/assets/thumb.png" alt="portrait" class="projects-card-portrait-img">
-					</div>
-					<div class="projects-card-detail">
-						<div class="projects-card-detail-text">
-
-						</div>
-					</div>
-				</div>
-
-				<div class="projects-card">
-					<div class="projects-card-thumb">
-						<img src="~/assets/thumb.png" alt="portrait" class="projects-card-portrait-img">
-					</div>
-					<div class="projects-card-detail">
-						<div class="projects-card-detail-text">
-
-						</div>
-					</div>
-				</div>
-
-				<div class="projects-card">
-					<div class="projects-card-thumb">
-						<img src="~/assets/thumb.png" alt="portrait" class="projects-card-portrait-img">
-					</div>
-					<div class="projects-card-detail">
-						<div class="projects-card-detail-text">
-
-						</div>
-					</div>
-				</div>
-
-				<div class="projects-card">
-					<div class="projects-card-thumb">
-						<img src="~/assets/thumb.png" alt="portrait" class="projects-card-portrait-img">
-					</div>
-					<div class="projects-card-detail">
-						<div class="projects-card-detail-text">
-
-						</div>
-					</div>
-				</div>
-
-				<!-- end card -->
-				</div>
-				<div class="projects-github">
-					<a href="#" class="projects-github-link">See more on github.</a>
-				</div>
-				<div class="projects-skill-card"></div>
-		</section>
-	</div>
+  <div class="container">
+    <section id="projects">
+      <h1 class="projects-header section-heading">Works</h1>
+      <!-- Stack of card ripped straight from css-tricks.com -->
+      <div class="card-container">
+        <div class="card">
+          <div class="project-wrapper">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, deleniti.</h3>
+            <div class="project-content">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis ex amet, nesciunt aperiam sed rerum voluptate facere natus eius voluptatum!</p>
+            </div>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, deleniti.</h3>
+          <div class="project-content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis ex amet, nesciunt aperiam sed rerum voluptate facere natus eius voluptatum!</p>
+          </div>
+          <a href="#">Learn more</a>
+        </div>
+        <div class="card">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, deleniti.</h3>
+          <div class="project-content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis ex amet, nesciunt aperiam sed rerum voluptate facere natus eius voluptatum!</p>
+          </div>
+          <a href="#">Learn more</a>
+        </div>
+        <div class="card">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, deleniti.</h3>
+          <div class="project-content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis ex amet, nesciunt aperiam sed rerum voluptate facere natus eius voluptatum!</p>
+          </div>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+      <div class="projects-github">
+        <a href="#">See more on github.</a>
+      </div>
+      <div class="projects-skill-card"></div>
+    </section>
+  </div>
 </template>
 <script>
 export default {
   name: "Projects"
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~/assets/styles/variables.scss";
 
-.projects-cards-grid {
+.card-container {
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-	flex-wrap: wrap;
-	
-	@media screen and (max-width: 767px) {
-		flex-direction: column;
-	}
+  -webkit-overflow-scrolling: touch;
+}
+
+.card {
+  background-color: lighten($grey-light, 3%);
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #3131312a;
+  flex-direction: column;
+  transition: 0.2s;
+  position: relative;
+  padding: 24px;
+
+  h3 {
+    z-index: 2;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: $black;
+  }
+  .project-content {
+    z-index: 2;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: $black;
+  }
+
+  .project-thumb {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+  }
 }
 .projects-github {
-  margin: 26px;
-  text-align: center;
+  margin: 46px;
+}
+.card:not(:first-child) {
+  margin-left: -130px;
+}
 
-  .projects-github-link {
-    text-decoration: underline;
+.card:focus-within,
+.card:hover {
+  background-color: $white;
+  transform: translate(0, -1rem);
+}
+.card:focus-within ~ .card,
+.card:hover ~ .card {
+  transform: translateX(130px);
+}
+@media (max-width: 1200px) {
+  .card {
+    min-width: 220px;
+  }
+  .card:not(:first-child) {
+    margin-left: -30px;
+  }
+  .card:hover {
+    transform: translate(0, -1rem);
+  }
+  .card:hover ~ .card {
+    transform: translateX(30px);
   }
 }
-.projects-card {
-	width: calc(90% / 3);
-  margin: 10px auto;
-	filter: brightness(90%);
-	z-index: 2;
-  transition: filter 200ms ease-in-out, transform 200ms ease-in-out;
-  &:hover {
-    filter: brightness(100%);
-    transform: scale(1.03, 1.03);
-	}
-	
-	@media screen and (max-width: 767px) {
-			width: 90%;
-	}
-
-  .projects-card-thumb {
-    max-width: 100%;
+@media (max-width: 800px) {
+  .card {
+    min-width: 190px;
+  }
+  .card:not(:first-child) {
+    margin-left: -10px;
+  }
+  .card:hover {
+    transform: translate(0, -1rem);
+  }
+  .card:hover ~ .card {
+    transform: translateX(10px);
   }
 }
+
 </style>
 

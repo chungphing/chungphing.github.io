@@ -2,19 +2,18 @@
   <div>
     <navigation></navigation>
     <nuxt/>
+    <MyFooter />
   </div>
 </template>
 <script>
 import Navigation from '~/components/Navigation.vue'
-
+import MyFooter from '~/components/_sections/My-Footer.vue'
 export default {
    components: {
-    Navigation
+    Navigation,
+    MyFooter
   },
   mounted: function () {
-  // setInterval(() => {
-  //   this.index = this.index + 1;
-  // }, 3000);
   if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
         if (!user) {
@@ -39,6 +38,11 @@ img {
 
 a {
   text-decoration: none;
+  color: $blue;
+
+  &:hover {
+    color: $blue-dark;
+  }
 }
 body{
   box-sizing: border-box;
@@ -51,6 +55,16 @@ p{
 }
 h1{
   font-family: 'Open Sans', sans-serif;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+h3 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: 500;
+    font-size: 1rem;
 }
 /*end fix*/
 #__nuxt {
@@ -76,7 +90,7 @@ h1{
 .container{
   justify-content: center;
   display: flex;
-  max-width: 1180px;
+  max-width: 900px;
   width: 90%;
   flex-direction: column;
   margin: 0 auto;
@@ -87,15 +101,19 @@ section{
   flex-direction: column;
    //centering about
   align-items: center;
-
 }
+
+.container section {
+  border-top: 1px solid $separator;
+}
+
 .section-heading {
     text-align: center;
     color: $blue;
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: 1px;
-    margin: 3rem;
+    margin: 1.5rem 3rem;
 }
 .section-subheading {
     text-align: center;
@@ -105,5 +123,15 @@ section{
     letter-spacing: 1px;
 }
 
+
+.dark {
+  color: $grey;
+}
+.light {
+  color: $white;
+}
+.black {
+  color: $black;
+}
 </style>
 
