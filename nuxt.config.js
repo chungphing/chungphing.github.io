@@ -1,4 +1,5 @@
 
+const path = require('path');
 const routerBase = process.env.DEPLOY_ENV === 'MASTER' ? {
   router: {
     base: '/chungphing-site/'
@@ -36,7 +37,17 @@ module.exports = {
       }
     ]
   },
+  modules: [
+    '@nuxtjs/markdownit'
+  ],
+  markdownit: {
+    injected: true,
+    preset: 'default',
+    breaks: true,
+    html: true
 
+    
+  },
   // css: [
   //   // CSS file in the project
   //   '@/assets/styles/variables.scss'
@@ -55,12 +66,18 @@ module.exports = {
     ** Run ESLint on save
     */
     extend (config, { isDev, isClient }) {
+      console.log('run eslint...');
+      
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
+        })
+        config.module.rules.push({
+          test: /\.md$/,
+          loader: 'frontmatter-markdown-loader'
         })
       }
     }
