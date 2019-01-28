@@ -27,6 +27,8 @@ export default {
     Design,
     Skills,
     RecentPost
+  },
+  mounted() {
   }
 } 
 </script>

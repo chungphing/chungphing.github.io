@@ -3,7 +3,13 @@
     <div class="container">
       <section id="recent">
         <div class="posts">
-          <div class="post">
+          <PostMini
+            v-for="post in recentPosts"
+            :key="post.name"
+            :title="post.name"
+            :summary="post.name"
+          />
+          <!-- <div class="post">
             <h3 class="post-title">Lorem, ipsum dolor.</h3>
             <div class="post-content">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, illo?</p>
@@ -16,14 +22,7 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, illo?</p>
             </div>
             <a href="#" class="post-button">Read more</a>
-          </div>
-          <div class="post">
-            <h3 class="post-title">Lorem, ipsum dolor.</h3>
-            <div class="post-content">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, illo?</p>
-            </div>
-            <a href="#" class="post-button">Read more</a>
-          </div>
+          </div>-->
         </div>
         <a href="#" class="post-button">More Posts</a>
       </section>
@@ -31,8 +30,17 @@
   </div>
 </template>
 <script>
+import PostMini from "~/components/PostMini";
 export default {
-  name: "RecentPost"
+  name: "RecentPost",
+  components: {
+    PostMini
+  },
+  computed: {
+    recentPosts() {
+      return this.$store.state.blogPosts;
+    }
+  }
 };
 </script>
 <style lang="scss">
@@ -48,6 +56,7 @@ export default {
     align-items: flex-start;
     padding: 24px 0;
     .posts {
+      width: 100%;
       display: flex;
       flex-direction: row;
 

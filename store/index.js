@@ -2,29 +2,29 @@ import Vuex from 'vuex'
 import mutations from './mutations'
 const path = require('path');
 
-const mdBlogpost = []
+const mdPosts = {}
 
 function importAll (resolve) {
     resolve.keys().forEach(key => {
-        const name = key.match(/\/(.+)\.md$/);
-        mdBlogpost[name] = resolve(key)
+        const [_,name] = key.match(/\/(.+)\.md$/);
+        const post = resolve(key)
+        console.log(post);
+        
+        mdPosts[name] = {
+            name: name,
+            post: post.body
+        }
     });
-}
-  
+} 
 importAll(require.context("~/content/blog/posts", true, /\.md$/));
-console.log(mdBlogpost);
-
-
 
 const createStore = () => {
     return new Vuex.Store({
         state: {
-            blogPosts: mdBlogpost,
+            test: 0,
+            blogPosts: mdPosts
         },
-        mutations,
-        actions: {
-
-        }
+        mutations
     })
 }
 
