@@ -5,24 +5,10 @@
         <div class="posts">
           <PostMini
             v-for="post in recentPosts"
-            :key="post.name"
-            :title="post.name"
-            :summary="post.name"
+            :key="post.title"
+            :title="post.title"
+            :summary="post.summary"
           />
-          <!-- <div class="post">
-            <h3 class="post-title">Lorem, ipsum dolor.</h3>
-            <div class="post-content">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, illo?</p>
-            </div>
-            <a href="#" class="post-button">Read more</a>
-          </div>
-          <div class="post">
-            <h3 class="post-title">Lorem, ipsum dolor.</h3>
-            <div class="post-content">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, illo?</p>
-            </div>
-            <a href="#" class="post-button">Read more</a>
-          </div>-->
         </div>
         <a href="#" class="post-button">More Posts</a>
       </section>
@@ -38,7 +24,7 @@ export default {
   },
   computed: {
     recentPosts() {
-      return this.$store.state.blogPosts;
+      return this.$store.getters.recentPosts;
     }
   }
 };
