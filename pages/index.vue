@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <CustomHeader></CustomHeader>
-    <RecentPost />
+    <BlogBanner />
     <About />
     <Skills />
     <Projects />
@@ -15,7 +15,7 @@ import CustomHeader from '~/components/_sections/CustomHeader'
 import About from '~/components/_sections/About'
 import Contact from '~/components/_sections/Contact'
 import Projects from '~/components/_sections/Projects'
-import RecentPost from '~/components/_sections/RecentPost'
+import BlogBanner from '~/components/_sections/BlogBanner'
 import Design from '~/components/_sections/Design'
 import Skills from '~/components/_sections/Skills'
 export default {
@@ -26,7 +26,7 @@ export default {
     Projects,
     Design,
     Skills,
-    RecentPost
+    BlogBanner
   },
   mounted() {
   }

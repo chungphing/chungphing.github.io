@@ -3,11 +3,12 @@
     <div class="container">
       <section id="recent">
         <div class="posts">
-          <PostMini
+          <Post
             v-for="post in recentPosts"
             :key="post.title"
             :title="post.title"
             :summary="post.summary"
+            :path="post.path"
           />
         </div>
         <a href="#" class="post-button">More Posts</a>
@@ -16,11 +17,11 @@
   </div>
 </template>
 <script>
-import PostMini from "~/components/PostMini";
+import Post from "~/components/PostSmall";
 export default {
   name: "RecentPost",
   components: {
-    PostMini
+    Post
   },
   computed: {
     recentPosts() {

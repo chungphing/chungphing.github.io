@@ -9,10 +9,12 @@ function importAll(resolve) {
     const [_, name] = key.match(/\/(.+)\.md$/);
     const post = resolve(key);    
     const attr = post.attributes;
-        
+    const _path = `/content/blog/posts/${key.replace('.md', '').replace('./', '')}`
     mdPosts[name] = {
       title: attr.title,
-      summary: post.body,
+      summary: attr.summary,
+      post: post.body,
+      path: _path,
     };
   });
 }
@@ -27,9 +29,6 @@ const createStore = () => {
     getters: {
       recentPosts: state => {
         return state.blogPosts;
-      },
-      test: () => {
-        return 0;
       }
     },
     mutations
