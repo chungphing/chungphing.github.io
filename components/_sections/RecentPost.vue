@@ -3,7 +3,7 @@
     <div class="container">
       <section id="recent">
         <div class="posts">
-          <Post
+          <RecentPostItem
             v-for="post in recentPosts"
             :key="post.title"
             :title="post.title"
@@ -17,11 +17,11 @@
   </div>
 </template>
 <script>
-import Post from "~/components/PostSmall";
+import RecentPostItem from "~/components/RecentPostItem";
 export default {
   name: "RecentPost",
   components: {
-    Post
+    RecentPostItem
   },
   computed: {
     recentPosts() {

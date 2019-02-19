@@ -13,11 +13,27 @@ function importAll(resolve) {
     mdPosts[name] = {
       title: attr.title,
       summary: attr.summary,
+      date: attr.date,
+      thumbnail: attr.thumbnail,
       post: post.body,
       path: _path,
     };
   });
 }
+// function importRecent(resolve) {
+//   resolve.keys().forEach(key => {
+//     const [_, name] = key.match(/\/(.+)\.md$/);
+//     const post = resolve(key);    
+//     const attr = post.attributes;
+//     const _path = `/content/blog/posts/${key.replace('.md', '').replace('./', '')}`
+//     mdPosts[name] = {
+//       title: attr.title,
+//       summary: attr.summary,
+//       post: post.body,
+//       path: _path,
+//     };
+//   });
+// }
 importAll(require.context("~/content/blog/posts", true, /\.md$/));
 
 const createStore = () => {
@@ -28,6 +44,11 @@ const createStore = () => {
     },
     getters: {
       recentPosts: state => {
+        //TODO: do filter logic later
+        return state.blogPosts;
+      },
+      blogposts: state => {
+        //TODO: do filter logic later
         return state.blogPosts;
       }
     },

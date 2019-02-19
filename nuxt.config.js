@@ -15,7 +15,7 @@ module.exports = {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   },
   head: {
-    title: 'chungphing',
+    title: 'Chungphing Ly',
     htmlAttrs: {
       lang: 'en',
     },

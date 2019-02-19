@@ -6,13 +6,15 @@
         :render-func="work.renderFunc"
         :static-render-funcs="work.staticRenderFuncs" -->
       />
+
+      <h1>testing slug</h1>
     </div>
 </template>
 
 <script>
 //this.$store.blogPosts
-const slug = this.$route.params.slug;
-console.log(slug);
+// const slug = this.$route.params.slug;
+// console.log(slug);
 
 
 
