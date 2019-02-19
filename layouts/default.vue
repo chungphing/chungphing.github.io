@@ -2,16 +2,16 @@
   <div>
     <navigation></navigation>
     <nuxt/>
-    <MyFooter />
+    <FooterSection />
   </div>
 </template>
 <script>
 import Navigation from '~/components/Navigation.vue'
-import MyFooter from '~/components/_sections/My-Footer.vue'
+import FooterSection from '~/components/_sections/FooterSection.vue'
 export default {
    components: {
     Navigation,
-    MyFooter
+    FooterSection
   },
   mounted: function () {
   if (window.netlifyIdentity) {

@@ -1,18 +1,18 @@
 <template>
   <div class="content">
     <content></content>
-    <MyFooter></MyFooter>
+    <FooterSection />
   </div>
 </template>
 
 <script>
 
 //import section components
-import MyFooter from '~/components/_sections/My-Footer'
+import FooterSection from '~/components/_sections/FooterSection'
 
 export default {
   components: {
-    MyFooter
+    FooterSection
   }
 } 
 </script>

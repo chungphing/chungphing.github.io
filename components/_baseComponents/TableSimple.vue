@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: 'cdev-button',
+    name: 'TableSimple',
     props: ['title', 'color']
 }
 </script>

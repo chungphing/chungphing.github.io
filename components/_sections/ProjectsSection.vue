@@ -44,7 +44,7 @@
 </template>
 <script>
 export default {
-  name: "Projects"
+  name: "ProjectsSection"
 };
 </script>
 <style lang="scss" scoped>

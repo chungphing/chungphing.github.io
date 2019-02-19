@@ -32,7 +32,7 @@
 //import core components
 
 export default {
-  name: "CustomHeader",
+  name: "HeaderSection",
   components: {
     
   }

@@ -14,29 +14,6 @@
         </div> -->
 
 
-<!--         
-        <div class="post">
-          <div class="post-info">
-            <h1 class="post-title">Title</h1>
-            <h2 class="post-summary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, ex.</h2>
-            <p class="post-date">Feb 19</p>
-          </div>
-          <div class="post-thumbnail">
-            <img src="https://via.placeholder.com/300x200" alt srcset>
-          </div>
-        </div>
-        <div class="post">
-          <div class="post-info">
-            <h1 class="post-title">Title</h1>
-            <h2 class="post-summary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, ex.</h2>
-            <p class="post-date">Feb 19</p>
-          </div>
-          <div class="post-thumbnail">
-            <img src="https://via.placeholder.com/300x200" alt srcset>
-          </div>
-        </div> -->
-
-
           <PostItem
             v-for="post in blogposts"
             :key="post.title"
@@ -53,9 +30,7 @@
 
 <script>
 //import section components
-import MyFooter from "~/components/_sections/My-Footer";
 import PostItem from "~/components/PostItem";
-import CustomHeader from "~/components/_sections/CustomHeader";
 
 export default {
   computed: {
@@ -64,8 +39,6 @@ export default {
     }
   },
   components: {
-    CustomHeader,
-    MyFooter,
     PostItem
   }
 };

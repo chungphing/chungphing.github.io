@@ -1,32 +1,32 @@
 <template>
   <div class="content">
-    <CustomHeader></CustomHeader>
-    <RecentPost />
-    <About />
-    <Skills />
-    <Projects />
+    <HeaderSection />
+    <RecentPostSection />
+    <AboutSection />
+    <SkillsSection />
+    <ProjectsSection />
   </div>
 </template>
 
 <script>
 
 //import section components
-import CustomHeader from '~/components/_sections/CustomHeader'
-import About from '~/components/_sections/About'
-import Contact from '~/components/_sections/Contact'
-import Projects from '~/components/_sections/Projects'
-import RecentPost from '~/components/_sections/RecentPost'
-import Design from '~/components/_sections/Design'
-import Skills from '~/components/_sections/Skills'
+import HeaderSection from '~/components/_sections/HeaderSection'
+import AboutSection from '~/components/_sections/AboutSection'
+import ContactSection from '~/components/_sections/ContactSection'
+import ProjectsSection from '~/components/_sections/ProjectsSection'
+import RecentPostSection from '~/components/_sections/RecentPostSection'
+import DesignSection from '~/components/_sections/DesignSection'
+import SkillsSection from '~/components/_sections/SkillsSection'
 export default {
   components: {
-    CustomHeader,
-    About,
-    Contact,
-    Projects,
-    Design,
-    Skills,
-    RecentPost
+    HeaderSection,
+    AboutSection,
+    ContactSection,
+    ProjectsSection,
+    DesignSection,
+    SkillsSection,
+    RecentPostSection
   },
   mounted() {
   }

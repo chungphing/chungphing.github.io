@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "cdev-button",
+  name: "SkillCard",
   props: ["title", "color"]
 };
 </script>

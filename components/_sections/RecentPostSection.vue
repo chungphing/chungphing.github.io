@@ -19,7 +19,7 @@
 <script>
 import RecentPostItem from "~/components/RecentPostItem";
 export default {
-  name: "RecentPost",
+  name: "RecentPostSection",
   components: {
     RecentPostItem
   },
