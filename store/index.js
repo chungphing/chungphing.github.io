@@ -9,7 +9,7 @@ function importAll(resolve) {
     const [_, name] = key.match(/\/(.+)\.md$/);
     const post = resolve(key);    
     const attr = post.attributes;
-    const _path = `/content/blog/posts/${key.replace('.md', '').replace('./', '')}`
+    const _path = `/posts/${key.replace('.md', '').replace('./', '')}`
     mdPosts[name] = {
       title: attr.title,
       summary: attr.summary,
@@ -40,7 +40,9 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       test: 0,
-      blogPosts: mdPosts
+      blogPosts: mdPosts,
+      blogTitle: '',
+      blogThumbnail: ''
     },
     getters: {
       recentPosts: state => {
