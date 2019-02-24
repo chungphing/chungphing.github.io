@@ -12,7 +12,7 @@ module.exports = {
   ** Headers of the page
   */
   env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+    baseUrl: process.env.URL || 'http://localhost:3000'
   },
   head: {
     title: 'Chungphing Ly',
@@ -51,7 +51,7 @@ module.exports = {
     */
     extend (config, { isDev, isClient }) {
       console.log('run eslint...');
-      
+
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -68,7 +68,7 @@ module.exports = {
             root: 'dynamicMarkdown'
           }
         }
-      
+
       })
     }
   },
