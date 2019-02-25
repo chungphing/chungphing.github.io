@@ -55,57 +55,5 @@ export default {
   width: 120px;
   margin: 20px 50px;
 }
-.about-social {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media only screen and (max-width: 767px) {
-    justify-content: center;
-  }
-  .about-description {
-    display: column;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .about-social-email {
-    margin: 5px;
-    a {
-      color: $blue;
-      font-weight: 600;
-    }
-  }
-}
-.about-social-container {
-  padding: 24px 10px;
-  margin: 24px 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: $grey-light;
-  justify-content: center;
-  h3 {
-    flex: 4 1 auto;
-    margin: 12px 26px;
-  }
-  .about-social-item {
-    flex: 1 1 auto;
-    max-width: 25px;
-    margin: 12px 26px;
-
-    cursor: pointer;
-
-    @media only screen and (max-width: 767px) {
-      width: 25px;
-      margin: 12px;
-    }
-    &:first-child {
-      @media only screen and (max-width: 767px) {
-        //margin: 12px auto;
-      }
-    }
-  }
-}
 </style>
 

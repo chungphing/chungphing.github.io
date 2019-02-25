@@ -1,11 +1,13 @@
 <template>
   <div class="skill-card-item">
-    <div class="skill-card-item-thumb">
-      <img :src="icon" :alt="alt">
+    <div class="skill-card-header">
+      <div class="skill-card-item-thumb">
+        <img :src="icon" :alt="alt">
+      </div>
+      <h3>{{ title }}</h3>
     </div>
-    <h3>{{ title }}</h3>
     <div class="skill-content">
-      <p> {{ description }}</p>
+      <p>{{ description }}</p>
     </div>
   </div>
 </template>
@@ -20,24 +22,35 @@ export default {
 @import "~/assets/styles/variables.scss";
 
 .skill-card-item {
-  text-align: center;
+  text-align: justify;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 12px 0;
   height: 200px;
-  width: 33.333333%;
+  flex: 1 1 0;
   transition: all 250ms ease-in-out;
   //border: 1px solid $grey-light;
+  margin: 12px 5px;
 
-  @media only screen and (max-width: 767px) {
-    width: 100%;
-    flex-direction: row;
-    justify-content: flex-start;
+  &:first-child {
+    margin-left: 0;
   }
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .skill-card-item-thumb {
+    width: 46px;
+  }
+
   .skill-content {
     display: block;
+  }
+  .skill-card-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   h3 {
     color: $blue;
@@ -45,22 +58,20 @@ export default {
     padding: 8px;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     margin: 4px;
     padding: 4px;
   }
 
   &:hover {
-   //transform: scale(1.01);
+    //transform: scale(1.01);
     //box-shadow: 0 0 10px $grey-light;
   }
-}
-
-.skill-card-item {
-  // width: calc(90% / 4);
-  // margin: 1.1%;
-}
-.skill-card-item-thumb {
-  width: 46px;
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+  }
 }
 </style>

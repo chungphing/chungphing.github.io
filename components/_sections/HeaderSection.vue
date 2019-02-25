@@ -9,7 +9,7 @@
                     v-smooth-scroll="{duration:500, offset: -50}"
                     href="#about"
                     aria-label="description"
-                    class="button-prime" >Learn More</a>
+                    class="button-prime bandaid" >Learn More</a>
                 </div>
             </div>
             <div class="background-art"></div>
@@ -104,11 +104,11 @@ export default {
   text-transform: uppercase;
   border: none;
   letter-spacing: 2px;
-  font-size: .8rem;
-  font-weight: bold;
+  font-size: .875rem;
+  font-weight: bolder;
   padding: 5px 15px;
   cursor: pointer;
-  background-color: $blue;
+  //background-color: $blue;
   color: $text;
   height: 40px;
   margin: 14px 0;
@@ -123,6 +123,22 @@ export default {
 }
 .button-prime:active {
   background-color: darken($blue, 10%);
+}
+
+.bandaid{
+  position: relative;
+}
+
+.bandaid:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/pattern/circle.svg');
+  background-color: $blue;
 }
 
 #background-art {

@@ -2,18 +2,6 @@
   <div>
     <div class="container">
       <section class="post-container">
-        <!-- <div class="post post__first">
-          <div class="post-info">
-            <h1 class="post-title">Title</h1>
-            <h2 class="post-summary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, ex.</h2>
-            <p class="post-date">Feb 19</p>
-          </div>
-          <div class="post-thumbnail">
-            <img src="https://via.placeholder.com/400x150" alt srcset>
-          </div>
-        </div> -->
-
-
           <PostItem
             v-for="post in blogposts"
             :key="post.title"
