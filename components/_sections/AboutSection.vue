@@ -8,9 +8,6 @@
             <div class="about-card-portrait">
               <img src="~/assets/img/portrait.png" alt="portrait" class="about-card-portrait-img">
             </div>
-            <!-- <div class="about-social-email">
-                                Email: <a href="mailto:chungphing@gmail.com">chungphing@gmail.com</a>
-            </div>-->
           </div>
           <div class="about-card-detail-text">
             <p>I'm a Web Developer based in Phnom Penh. From brochure website to commercial web application, I am excited to bringing new idea to life.</p>
@@ -19,29 +16,7 @@
             <p>Throughout the years, I have worked on multiple platforms / frameworks with Node.js, React, Redux, Vue.js, Laravel, Codeigniter, Wordpress, and Android app development with Java and React Native</p>
           </div>
           <div class="about-card-detail">
-            <div class="about-social-container">
-              <h3>Find me on these places...</h3>
-              <div class="about-social-item">
-                <a href="https://www.facebook.com/chungphing">
-                  <img src="~/assets/icon/facebook-logo.svg" alt="facebook">
-                </a>
-              </div>
-              <div class="about-social-item">
-                <a href="https://www.instagram.com/chungphingly/">
-                  <img src="~/assets/icon/instagram-logo.svg" alt="github">
-                </a>
-              </div>
-              <div class="about-social-item">
-                <a href="https://www.linkedin.com/in/chungphing">
-                  <img src="~/assets/icon/linkedin-logo.svg" alt="linkedin">
-                </a>
-              </div>
-              <div class="about-social-item">
-                <a href="https://github.com/chungphing">
-                  <img src="~/assets/icon/github-logo.svg" alt="linkedin">
-                </a>
-              </div>
-            </div>
+            <SocialPanel />
           </div>
         </div>
       </div>
@@ -49,8 +24,13 @@
   </div>
 </template>
 <script>
+import SocialPanel from '~/components/SocialPanel'
+
 export default {
-  name: "About"
+  name: "About",
+  components: {
+    SocialPanel
+  }
 };
 </script>
 <style lang="scss">

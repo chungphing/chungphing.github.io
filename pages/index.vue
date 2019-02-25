@@ -4,7 +4,7 @@
     <RecentPostSection />
     <AboutSection />
     <SkillsSection />
-    <ProjectsSection />
+    <!-- <ProjectsSection /> -->
   </div>
 </template>
 
@@ -30,7 +30,7 @@ export default {
   },
   mounted() {
   }
-} 
+}
 </script>
 
 <style lang="scss">
@@ -92,7 +92,7 @@ export default {
   color: #fff;
 }
 
-.navigation-item{
+.navigation-item a{
   color: $grey;
 }
 #brand-logo{

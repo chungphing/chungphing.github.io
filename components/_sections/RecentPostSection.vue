@@ -11,7 +11,7 @@
             :path="post.path"
           />
         </div>
-        <a href="#" class="post-button">More Posts</a>
+        <a :href="baseUrl + '/blog'" class="post-button">All Posts</a>
       </section>
     </div>
   </div>
@@ -26,6 +26,11 @@ export default {
   computed: {
     recentPosts() {
       return this.$store.getters.recentPosts;
+    },
+    baseUrl: {
+      get: function() {
+        return process.env.baseUrl;
+      }
     }
   }
 };
@@ -45,34 +50,6 @@ export default {
     .posts {
       width: 100%;
       display: flex;
-      flex-direction: row;
-
-      .post {
-        display: flex;
-        flex-direction: column;
-        width: 33.3333%;
-        margin: 16px;
-        padding: 24px;
-        background-color: $white;
-        border: 1px solid $separator;
-
-        &:first-child {
-          margin-left: 0;
-        }
-        &:last-child {
-          margin-right: 0;
-        }
-
-        .post-title {
-          color: $blue;
-          font-size: 0.8rem;
-          font-weight: 500;
-        }
-        .post-content p {
-          font-size: 0.8rem;
-          color: $black;
-        }
-      }
     }
   }
   .post-button {
@@ -80,6 +57,12 @@ export default {
     font-size: 0.8rem;
     font-weight: 500;
     border-bottom: 1.3px solid $blue;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .posts {
+      flex-direction: column;
+    }
   }
 }
 </style>

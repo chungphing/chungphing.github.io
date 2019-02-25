@@ -5,27 +5,14 @@
                   <p class="hero-title dark"> Hello,</p>
                   <p class="hero-title dark">I'm <span id="brand-name">Chungphing Ly</span></p>
                   <div class="header-subtitle dark">I am a web developer, I guess...</div>
-                  <a 
-                    v-smooth-scroll="{duration:500, offset: -50}" 
-                    href="#about" 
-                    aria-label="description" 
+                  <a
+                    v-smooth-scroll="{duration:500, offset: -50}"
+                    href="#about"
+                    aria-label="description"
                     class="button-prime" >Learn More</a>
                 </div>
             </div>
-            <svg 
-                    id="background-art" 
-                    data-name="Layer 1" 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    viewBox="0 0 500 500"
-                    width="1200px"
-                    height="500px">
-                      <defs></defs>
-                      <rect class="0e5908c1-4a6d-431b-b506-6dba3d716f88" x="1.9" y="56.12" width="496.88" height="45.87"/>
-                      <polyline 
-                        width="496.88" height="45.87"
-                        class="59b20561-7fcc-4ff0-9f15-fa30ac27f0a2" 
-                        points="209.45 349.71 0.78 171.92 0.8 230.48 250.77 443.88 251.15 261.94 499.23 443.88 499.19 385.31 209.14 171.89"/>
-                    </svg>
+            <div class="background-art"></div>
     </section>
 </template>
 <script>
@@ -34,7 +21,7 @@
 export default {
   name: "HeaderSection",
   components: {
-    
+
   }
 };
 </script>
@@ -56,16 +43,19 @@ export default {
   }
   @media only screen and (max-width: 767px) {
     padding: 28px;
-    height: 100vh;
+    height: 80vh;
     .button-prime {
       width: 100%;
+    }
+    .container{
+      align-items: center;
     }
   }
   @media only screen and (min-width: 800px) {
     .button-prime {
       min-width: 200px;
     }
-    
+
   }
 }
 .header-greeting,
@@ -107,7 +97,7 @@ export default {
 }
 
 
-.button-prime{ 
+.button-prime{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,6 +133,11 @@ export default {
   right: -100px;
   z-index: -1;
   pointer-events: none;
+
+  @media only screen and (max-width: 767px){
+    top: 20%;
+    right: -80%;
+  }
 }
 
 </style>

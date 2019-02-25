@@ -3,12 +3,8 @@
     <div class="navigation-container" :class="{sticky: position > 200}">
       <nav class="navigation container">
         <ul class="navigation-list">
-          <li>
-            <a
-              :href="baseUrl + '#header'"
-              v-smooth-scroll="{duration:500, offset: -50}"
-              class="navigation-branding"
-            >
+          <li class="navigation-branding">
+            <a :href="baseUrl + '#header'" v-smooth-scroll="{duration:500, offset: -50}">
               <svg
                 id="brand-logo"
                 data-name="Layer 1"
@@ -35,33 +31,17 @@
               </svg>
             </a>
           </li>
-          <li>
-            <a
-              :href="baseUrl + '#about'"
-              v-smooth-scroll="{duration:500, offset: -50}"
-              class="navigation-item"
-            >About</a>
+          <li class="navigation-item">
+            <a :href="baseUrl + '#about'" v-smooth-scroll="{duration:500, offset: -50}">About</a>
           </li>
-          <li>
-            <a
-              :href="baseUrl + '#develop'"
-              v-smooth-scroll="{duration:500, offset: -50}"
-              class="navigation-item"
-            >Skills</a>
+          <li class="navigation-item">
+            <a :href="baseUrl + '#develop'" v-smooth-scroll="{duration:500, offset: -50}">Skills</a>
           </li>
-          <li>
-            <a
-              :href="baseUrl + '#project'"
-              v-smooth-scroll="{duration:500, offset: -50}"
-              class="navigation-item"
-            >Works</a>
+          <li class="navigation-item">
+            <a :href="baseUrl + '#project'" v-smooth-scroll="{duration:500, offset: -50}">Works</a>
           </li>
-          <li>
-            <a
-              :href="baseUrl + '/blog'"
-              v-smooth-scroll="{duration:500, offset: -50}"
-              class="navigation-item"
-            >Blog</a>
+          <li class="navigation-item">
+            <a :href="baseUrl + '/blog'" v-smooth-scroll="{duration:500, offset: -50}">Blog</a>
           </li>
         </ul>
       </nav>
@@ -107,6 +87,7 @@ export default {
 /*start navigation */
 .navigation-container {
   width: 100%;
+  margin: 0 auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -116,7 +97,8 @@ export default {
 }
 
 .navigation {
-  width: 100%;
+  max-width: 900px;
+  width: 90%;
   text-align: center;
   font-family: "Open Sans", sans-serif;
   z-index: 10;
@@ -130,27 +112,43 @@ export default {
     color: $blue;
     padding-left: 0;
   }
-  .navigation-item {
-    vertical-align: middle;
-    text-align: center;
-    font-size: 0.9rem;
-    transition: all 300ms ease-in-out;
-    position: relative;
-    &:hover {
-      color: $blue;
-      cursor: pointer;
-      &::after {
-        width: 100%;
+
+  .navigation-list {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    align-items: center;
+    .navigation-branding {
+      margin-right: auto;
+    }
+    .navigation-item {
+
+      a {
+        vertical-align: middle;
+        text-align: center;
+        font-size: 0.9rem;
+        transition: all 300ms ease-in-out;
+        position: relative;
+        padding: 10px 18px;
+
+        &:hover {
+          color: $blue;
+          cursor: pointer;
+          &::after {
+            width: 100%;
+          }
+        }
+        &:last-child {
+          padding-right: 0;
+          margin-right: 0;
+        }
+
+        @media only screen and (max-width: 767px) {
+          display: none;
+        }
       }
-    }
-
-    &:last-child {
-      padding-right: 0;
-      margin-right: 0;
-    }
-
-    @media only screen and (max-width: 767px) {
-      display: none;
     }
   }
 
@@ -166,26 +164,11 @@ export default {
 
     @media only screen and (max-width: 767px) {
       display: flex;
+
+      .navigation-branding {
+        align-self: center;
+      }
     }
-  }
-}
-
-.navigation-list {
-  width: 100%;
-  display: flex;
-  list-style: none;
-  padding: 5px 0;
-  margin: 0;
-  align-items: center;
-
-  & li:first-child {
-    margin-right: auto;
-  }
-  & li {
-    margin: 0;
-  }
-  & a {
-    padding: 10px 18px;
   }
 }
 

@@ -1,11 +1,11 @@
 <template>
   <div class="skill-card-item">
     <div class="skill-card-item-thumb">
-      <img src="~assets/skills/js.svg" alt="Javascript">
+      <img :src="icon" :alt="alt">
     </div>
-    <h3>Javascript</h3>
+    <h3>{{ title }}</h3>
     <div class="skill-content">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio vero, quas iure at corporis provident.</p>
+      <p> {{ description }}</p>
     </div>
   </div>
 </template>
@@ -13,7 +13,7 @@
 <script>
 export default {
   name: "SkillCard",
-  props: ["title", "color"]
+  props: ["title", "description", "icon", "alt"]
 };
 </script>
 <style lang="scss" scoped>
