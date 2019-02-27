@@ -9,7 +9,7 @@
             :summary="post.summary"
             :path="post.path"
             :date="post.date"
-            :thumbnail="'https://via.placeholder.com/300x200'"
+            :thumbnail="post.thumbnail"
           />
       </section>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="skill-card-item">
+  <div tabindex="0" class="skill-card-item" :class="alt">
     <div class="skill-card-header">
       <div class="skill-card-item-thumb">
         <img :src="icon" :alt="alt">
@@ -27,11 +27,12 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  max-height: 300px;
   flex: 1 1 0;
   transition: all 250ms ease-in-out;
   //border: 1px solid $grey-light;
-  margin: 12px 5px;
+  padding: 12px 5px;
+  margin: 0 2px;
 
   &:first-child {
     margin-left: 0;
@@ -63,15 +64,37 @@ export default {
     padding: 4px;
   }
 
-  &:hover {
-    //transform: scale(1.01);
-    //box-shadow: 0 0 10px $grey-light;
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    cursor: default;
+    background-color: white;
+    box-shadow: 0 0 15px $grey-light;
   }
+
   @media only screen and (max-width: 767px) {
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;
     flex: 1 1 auto;
   }
+}
+.php {
+  border-top: 5px solid $grey-light;
+}
+.php:hover {
+  border-top: 5px solid $php;
+}
+.javascript {
+  border-top: 5px solid $grey-light;
+}
+.javascript:hover {
+  border-top: 5px solid $javascript;
+}
+.css {
+  border-top: 5px solid $grey-light;
+}
+.css:hover {
+  border-top: 5px solid $css;
 }
 </style>

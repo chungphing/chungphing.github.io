@@ -7,14 +7,16 @@ const mdPosts = {};
 function importAll(resolve) {
   resolve.keys().forEach(key => {
     const [_, name] = key.match(/\/(.+)\.md$/);
-    const post = resolve(key);    
+    const post = resolve(key);
     const attr = post.attributes;
     const _path = `/posts/${key.replace('.md', '').replace('./', '')}`
+    console.log(attr.thumbnail);
+
     mdPosts[name] = {
       title: attr.title,
       summary: attr.summary,
       date: attr.date,
-      thumbnail: attr.thumbnail,
+      thumbnail: attr.thumbnail === undefined ? '/images/placeholder.png' : attr.thumbnail,
       post: post.body,
       path: _path,
     };
@@ -23,7 +25,7 @@ function importAll(resolve) {
 // function importRecent(resolve) {
 //   resolve.keys().forEach(key => {
 //     const [_, name] = key.match(/\/(.+)\.md$/);
-//     const post = resolve(key);    
+//     const post = resolve(key);
 //     const attr = post.attributes;
 //     const _path = `/content/blog/posts/${key.replace('.md', '').replace('./', '')}`
 //     mdPosts[name] = {

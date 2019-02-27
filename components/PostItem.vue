@@ -8,7 +8,7 @@
       <p class="post-date">{{ date }}</p>
     </div>
     <div class="post-thumbnail">
-      <img src="https://via.placeholder.com/300x200" alt srcset>
+      <img :src="thumbnail" :alt="title" srcset>
     </div>
   </div>
 </template>
@@ -31,7 +31,7 @@ export default {
     flex: 1 1 auto;
   }
   .post-thumbnail {
-    min-width: 300px;
+    width: 300px;
     margin: 4px 0;
 
   }

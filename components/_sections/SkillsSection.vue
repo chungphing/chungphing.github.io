@@ -61,6 +61,7 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 24px 0;
 
   @media only screen and (max-width: 767px) {
     flex-direction: column;

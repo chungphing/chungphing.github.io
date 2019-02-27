@@ -3,28 +3,22 @@
     <section id="about">
       <h1 class="about-header section-heading">about me</h1>
       <div class="about-card">
-        <div class="about-card-detail">
-          <div class="about-social">
-            <div class="about-card-portrait">
-              <img src="~/assets/img/portrait.png" alt="portrait" class="about-card-portrait-img">
-            </div>
-          </div>
-          <div class="about-card-detail-text">
-            <p>I'm a Web Developer based in Phnom Penh. From brochure website to commercial web application, I am excited to bringing new idea to life.</p>
-          </div>
-          <div class="about-card-detail-text">
-            <p>Throughout the years, I have worked on multiple platforms / frameworks with Node.js, React, Redux, Vue.js, Laravel, Codeigniter, Wordpress, and Android app development with Java and React Native</p>
-          </div>
-          <div class="about-card-detail">
-            <SocialPanel />
+        <div class="about-social">
+          <div class="about-card-portrait">
+            <img src="~/assets/img/portrait.png" alt="portrait" class="about-card-portrait-img">
           </div>
         </div>
+        <div class="about-card-detail-text">
+          <p>I'm a web developer based in Phnom Penh. I build website for a living and for fun.</p>
+          <p>For the nerdy out there, my langauge of choice is Javascript. Although I do know and use PHP and Python, I find myself drawn into Javascript ecosystem more despite the exhausting amount of frameworks and libraries.</p>
+        </div>
+        <SocialPanel/>
       </div>
     </section>
   </div>
 </template>
 <script>
-import SocialPanel from '~/components/SocialPanel'
+import SocialPanel from "~/components/SocialPanel";
 
 export default {
   name: "About",
@@ -42,18 +36,23 @@ export default {
 
 .about-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 100%;
+
   @media only screen and (max-width: 767px) {
     flex-direction: column;
     align-items: center;
   }
   .about-card-detail-text {
+    align-self: center;
+    max-width: 500px;
+    text-align: center;
     line-height: 1.5;
   }
 }
 .about-card-portrait {
   width: 120px;
-  margin: 20px 50px;
+  margin: 20px auto;
 }
 </style>
 

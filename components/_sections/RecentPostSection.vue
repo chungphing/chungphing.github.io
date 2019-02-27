@@ -2,15 +2,16 @@
   <div class="recent-wrapper">
     <div class="container">
       <section id="recent">
-        <div class="posts">
+        <ul class="posts">
           <RecentPostItem
             v-for="post in recentPosts"
             :key="post.title"
             :title="post.title"
             :summary="post.summary"
             :path="post.path"
+            :thumbnail="post.thumbnail"
           />
-        </div>
+        </ul>
         <a :href="baseUrl + '/blog'" class="post-button">All Posts</a>
       </section>
     </div>
@@ -48,15 +49,20 @@ export default {
     align-items: flex-start;
     padding: 24px 0;
     .posts {
+      padding: 0;
       width: 100%;
       display: flex;
     }
   }
   .post-button {
+    padding: 10px;
+    margin: 0;
     align-self: flex-end;
-    font-size: 0.8rem;
-    font-weight: 500;
-    border-bottom: 1.3px solid $blue;
+  }
+  .post-button:hover {
+    color: $blue-dark;
+    background-color: $button-hover;
+    border-radius: 5px;
   }
 
   @media only screen and (max-width: 767px) {
