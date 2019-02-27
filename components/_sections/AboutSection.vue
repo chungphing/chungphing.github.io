@@ -3,11 +3,9 @@
     <section id="about">
       <h1 class="about-header section-heading">about me</h1>
       <div class="about-card">
-        <div class="about-social">
-          <div class="about-card-portrait">
+        <div class="about-card-portrait">
             <img src="~/assets/img/portrait.png" alt="portrait" class="about-card-portrait-img">
           </div>
-        </div>
         <div class="about-card-detail-text">
           <p>I'm a web developer based in Phnom Penh. I build website for a living and for fun.</p>
           <p>For the nerdy out there, my langauge of choice is Javascript. Although I do know and use PHP and Python, I find myself drawn into Javascript ecosystem more despite the exhausting amount of frameworks and libraries.</p>

@@ -2,18 +2,12 @@
   <div class="portal bandaid">
     <h3>Find me on these places...</h3>
     <div class="email">
-      <p>chungphing@gmial.com</p>
+      <a href="mailto:chungphing@gmail.com">
+        <p>chungphing@gmial.com</p>
+      </a>
     </div>
     <h3>Or</h3>
-    <div class="social">
-      <SocialItem
-        v-for="socialItem in socialItems"
-        :key="socialItem.alt"
-        :url="socialItem.url"
-        :icon="socialItem.icon"
-        :alt="socialItem.alt"
-      />
-    </div>
+    <SocialItem />
   </div>
 </template>
 
@@ -79,16 +73,7 @@ export default {
     }
   }
 }
-.social {
-  //   margin: 24px 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  @media screen and (max-width: 767px) {
-    justify-content: space-evenly;
-  }
-}
+
 .portal {
   display: flex;
   flex-direction: column;
@@ -96,18 +81,23 @@ export default {
   justify-content: center;
 
   @media screen and (max-width: 767px) {
-      width: 100%;
+    width: 100%;
   }
 }
 h3 {
   margin: 12px 26px;
   text-align: center;
-  color: $text;
+  color: $white;
 }
 .email {
   display: block;
-  width: 100%;
   text-align: center;
+  p {
+    font-family: "Open Sans", sans-serif;
+    color: $white;
+    font-weight: bolder;
+    border-bottom: 2px dotted $white;
+  }
 }
 
 .bandaid {

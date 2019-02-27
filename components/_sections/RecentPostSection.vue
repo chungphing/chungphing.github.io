@@ -12,7 +12,9 @@
             :thumbnail="post.thumbnail"
           />
         </ul>
-        <a :href="baseUrl + '/blog'" class="post-button">All Posts</a>
+        <a :href="baseUrl + '/blog'" class="post-button">
+          <span>All Posts</span>
+        </a>
       </section>
     </div>
   </div>
@@ -58,11 +60,19 @@ export default {
     padding: 10px;
     margin: 0;
     align-self: flex-end;
+    transition: all 100ms ease-in-out;
+    span {
+      border-bottom: 1px dotted $blue;
+    }
   }
   .post-button:hover {
     color: $blue-dark;
     background-color: $button-hover;
     border-radius: 5px;
+    transition: all 100ms ease-in-out;
+    span {
+      border-bottom: 1px dotted $blue-dark;
+    }
   }
 
   @media only screen and (max-width: 767px) {

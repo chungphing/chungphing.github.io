@@ -224,7 +224,7 @@ export default {
   }
   100% {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateY(0px);
   }
 }
 </style>

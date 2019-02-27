@@ -18,13 +18,18 @@ export default {
 <style lang="scss">
 @import "~/assets/styles/variables.scss";
 
+@for $i from 1 through 10 {
+  .post:nth-child(#{$i}n) {
+    animation-delay: #{$i * 150}ms;
+  }
+}
 .post {
   display: block;
   width: 32%;
   margin: 5px auto;
   background-color: $white;
   border: 1px solid $separator;
-
+  transition: all 100ms ease-in-out;
   .post-content {
     margin: 10px;
     word-break: break-word;
@@ -32,8 +37,10 @@ export default {
   }
   &:hover,
   & a:focus {
+    transition: all 100ms ease-in-out;
     border-bottom: 1px solid $blue;
     .post-title {
+      transition: all 100ms ease-in-out;
       color: $blue;
     }
   }
@@ -50,6 +57,7 @@ export default {
     color: $grey;
     font-size: 0.8rem;
     font-weight: 500;
+    transition: all 100ms ease-in-out;
   }
   .post-content p {
     font-size: 0.8rem;

@@ -1,18 +1,17 @@
 <template>
-  <div>
-    <div class="container">
-      <section class="post-container">
-          <PostItem
-            v-for="post in blogposts"
-            :key="post.title"
-            :title="post.title"
-            :summary="post.summary"
-            :path="post.path"
-            :date="post.date"
-            :thumbnail="post.thumbnail"
-          />
-      </section>
-    </div>
+  <div class="container">
+    <main class="posts">
+      <h1>Blog</h1>
+      <PostItem
+        v-for="post in blogposts"
+        :key="post.title"
+        :title="post.title"
+        :summary="post.summary"
+        :path="post.path"
+        :date="post.date"
+        :thumbnail="post.thumbnail"
+      />
+    </main>
   </div>
 </template>
 
@@ -68,9 +67,13 @@ export default {
   fill: $grey;
 }
 
-.post-container {
+.posts {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+}
+.post h1 {
+  color: $text;
 }
 .post__first {
   flex-direction: column;

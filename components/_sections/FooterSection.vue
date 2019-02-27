@@ -57,9 +57,10 @@ export default {};
 
         a {
             color: $white;
-            border-bottom: 1px solid $separator;
+            border-bottom: 1px dotted $separator;
             &:hover {
                 color: $blue;
+                border-bottom: 1px dotted $blue;
             }
         }
       }

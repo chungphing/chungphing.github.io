@@ -1,52 +1,50 @@
 <template>
-  <section id="navigation">
-    <div class="navigation-container" :class="{sticky: position > 200}">
-      <nav class="navigation container">
-        <ul class="navigation-list">
-          <li class="navigation-branding">
-            <a :href="baseUrl + '#header'" v-smooth-scroll="{duration:500, offset: -50}">
-              <svg
-                id="brand-logo"
-                data-name="Layer 1"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 500 500"
-                width="46px"
-                height="46px"
-              >
-                <defs></defs>
-                <title>Chungphing LY</title>
-                <rect
-                  class="0e5908c1-4a6d-431b-b506-6dba3d716f88"
-                  x="1.9"
-                  y="56.12"
-                  width="496.88"
-                  height="45.87"
-                ></rect>
-                <polyline
-                  width="496.88"
-                  height="45.87"
-                  class="59b20561-7fcc-4ff0-9f15-fa30ac27f0a2"
-                  points="209.45 349.71 0.78 171.92 0.8 230.48 250.77 443.88 251.15 261.94 499.23 443.88 499.19 385.31 209.14 171.89"
-                ></polyline>
-              </svg>
-            </a>
-          </li>
-          <li class="navigation-item">
-            <a :href="baseUrl + '#about'" v-smooth-scroll="{duration:500, offset: -50}">About</a>
-          </li>
-          <li class="navigation-item">
-            <a :href="baseUrl + '#develop'" v-smooth-scroll="{duration:500, offset: -50}">Skills</a>
-          </li>
-          <li class="navigation-item">
-            <a :href="baseUrl + '#project'" v-smooth-scroll="{duration:500, offset: -50}">Works</a>
-          </li>
-          <li class="navigation-item">
-            <a :href="baseUrl + '/blog'" v-smooth-scroll="{duration:500, offset: -50}">Blog</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </section>
+  <div class="navigation-container" :class="{sticky: position > 200}">
+    <nav class="navigation container">
+      <ul class="navigation-list">
+        <li class="navigation-branding">
+          <a :href="baseUrl + '#header'" v-smooth-scroll="{duration:500, offset: -50}">
+            <svg
+              id="brand-logo"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 500 500"
+              width="46px"
+              height="46px"
+            >
+              <defs></defs>
+              <title>Chungphing LY</title>
+              <rect
+                class="0e5908c1-4a6d-431b-b506-6dba3d716f88"
+                x="1.9"
+                y="56.12"
+                width="496.88"
+                height="45.87"
+              ></rect>
+              <polyline
+                width="496.88"
+                height="45.87"
+                class="59b20561-7fcc-4ff0-9f15-fa30ac27f0a2"
+                points="209.45 349.71 0.78 171.92 0.8 230.48 250.77 443.88 251.15 261.94 499.23 443.88 499.19 385.31 209.14 171.89"
+              ></polyline>
+            </svg>
+          </a>
+        </li>
+        <li class="navigation-item">
+          <a :href="baseUrl + '#about'" v-smooth-scroll="{duration:500, offset: -50}">About</a>
+        </li>
+        <li class="navigation-item">
+          <a :href="baseUrl + '#develop'" v-smooth-scroll="{duration:500, offset: -50}">Skills</a>
+        </li>
+        <li class="navigation-item">
+          <a :href="baseUrl + '#project'" v-smooth-scroll="{duration:500, offset: -50}">Works</a>
+        </li>
+        <li class="navigation-item">
+          <a :href="baseUrl + '/blog'" v-smooth-scroll="{duration:500, offset: -50}">Blog</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </template>
 
 <script>
@@ -124,7 +122,6 @@ export default {
       margin-right: auto;
     }
     .navigation-item {
-
       a {
         vertical-align: middle;
         text-align: center;
