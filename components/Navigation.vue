@@ -40,7 +40,7 @@
           <a :href="baseUrl + '#project'" v-smooth-scroll="{duration:500, offset: -50}">Works</a>
         </li>
         <li class="navigation-item">
-          <a :href="baseUrl + '/blog'" v-smooth-scroll="{duration:500, offset: -50}">Blog</a>
+          <nuxt-link to="/blog" v-smooth-scroll="{duration:500, offset: -50}">Blog</nuxt-link>
         </li>
       </ul>
     </nav>

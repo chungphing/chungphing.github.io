@@ -1,6 +1,6 @@
 <template>
   <article>
-    <a :href="path" class="post">
+    <nuxt-link :to="path" class="post">
       <div class="post-thumbnail">
         <img :src="thumbnail" :alt="title" srcset>
       </div>
@@ -9,7 +9,7 @@
         <h2 class="post-summary">{{ summary }}</h2>
         <p class="post-date">{{ date }}</p>
       </div>
-    </a>
+    </nuxt-link>
   </article>
 </template>
 <script>

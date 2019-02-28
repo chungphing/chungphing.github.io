@@ -1,12 +1,12 @@
 <template>
   <li class="post">
-    <a :href="path">
+    <nuxt-link :to="path">
       <img :src="thumbnail" :alt="title">
       <article class="post-content">
         <h3 class="post-title">{{ title }}</h3>
         <p>{{ summary }}</p>
       </article>
-    </a>
+    </nuxt-link>
   </li>
 </template>
 <script>
