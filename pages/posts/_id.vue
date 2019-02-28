@@ -24,12 +24,14 @@ export default {
       summary: '',
       date: '',
       thumbnail: '',
-      html: ''
+      html: '',
+      error: null,
+      loading: true
     };
   },
   mounted() {
-    const post = require(`~/content/blog/posts/${this.$route.params.slug}.md`);
-    console.log('slug: ', this.$route.params.slug);
+    const post = require(`~/content/blog/posts/${this.$route.params.id}.md`);
+    console.log('slug: ', this.$route.params.id);
 
     console.log('created() post:',post);
 
