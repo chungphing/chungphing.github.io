@@ -15,7 +15,7 @@ export default {
   props: ["title", "summary", "path", "thumbnail"]
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~/assets/styles/variables.scss";
 
 @for $i from 1 through 10 {

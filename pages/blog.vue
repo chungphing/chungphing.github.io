@@ -31,10 +31,11 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~/assets/styles/hamburgers.css";
 @import "~/assets/styles/variables.scss";
 @import "~/assets/styles/mixins.scss";
+
 .navigation-container {
   position: relative;
 }
@@ -63,6 +64,8 @@ export default {
 .navigation-item a{
   color: $grey;
 }
+
+
 #brand-logo {
   fill: $grey;
 }

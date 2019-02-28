@@ -3,7 +3,7 @@
     <nav class="navigation container">
       <ul class="navigation-list">
         <li class="navigation-branding">
-          <a :href="baseUrl + '#header'" v-smooth-scroll="{duration:500, offset: -50}">
+          <nuxt-link to="/" v-smooth-scroll="{duration:500, offset: -50}">
             <svg
               id="brand-logo"
               data-name="Layer 1"
@@ -28,7 +28,7 @@
                 points="209.45 349.71 0.78 171.92 0.8 230.48 250.77 443.88 251.15 261.94 499.23 443.88 499.19 385.31 209.14 171.89"
               ></polyline>
             </svg>
-          </a>
+          </nuxt-link>
         </li>
         <li class="navigation-item">
           <a :href="baseUrl + '#about'" v-smooth-scroll="{duration:500, offset: -50}">About</a>

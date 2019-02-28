@@ -38,7 +38,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~/assets/styles/variables.scss";
 .recent-wrapper {
   background-color: $grey-light;
