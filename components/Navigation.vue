@@ -125,11 +125,12 @@ export default {
       a {
         vertical-align: middle;
         text-align: center;
-        font-size: 0.9rem;
         transition: all 300ms ease-in-out;
         position: relative;
         padding: 10px 18px;
-
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 1px;
         &:hover {
           color: $blue;
           cursor: pointer;
@@ -140,10 +141,6 @@ export default {
         &:last-child {
           padding-right: 0;
           margin-right: 0;
-        }
-
-        @media only screen and (max-width: 767px) {
-          display: none;
         }
       }
     }
@@ -177,5 +174,20 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .navigation-list {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    justify-content: space-around;
+  }
+  .navigation .navigation-list .navigation-branding{
+    margin-right: 0;
+  }
 }
 </style>

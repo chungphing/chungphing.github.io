@@ -35,6 +35,7 @@ export default {
 .about-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
 
   @media only screen and (max-width: 767px) {
@@ -42,15 +43,14 @@ export default {
     align-items: center;
   }
   .about-card-detail-text {
-    font-size: 1rem;
-    font-weight: 500;
-    align-self: center;
     max-width: 500px;
-    text-align: center;
-    line-height: 1.5;
+    align-self: center;
   }
   .about-card-detail-text p {
     color: $grey;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.5;
   }
 }
 .about-card-portrait {

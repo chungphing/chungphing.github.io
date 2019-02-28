@@ -3,14 +3,15 @@
     <h1>{{attr.title}}</h1>
     <h2>{{attr.summary}}</h2>
     <h4>{{attr.date}}</h4>
+    <article>
     <img :src="attr.thumbnail" :alt="attr.title">
     <span v-html="post.html"></span>
+    </article>
   </div>
 </template>
 
 <script>
 import DynamicMarkdown from "~/components/DynamicMarkdown.vue";
-//import post from ('~/content/blog/posts/' + this.$route.params.slug + '.md');
 
 export default {
   components: {
@@ -24,8 +25,6 @@ export default {
   },
   created() {
     const post = require(`~/content/blog/posts/${this.$route.params.slug}.md`);
-    console.log("POST", post);
-
     this.post = post;
     this.attr = post.attributes;
   }
@@ -60,7 +59,7 @@ export default {
   color: #fff;
 }
 
-.navigation-item {
+.navigation-item a{
   color: $grey;
 }
 #brand-logo {
@@ -79,5 +78,13 @@ h2 {
 }
 h4 {
   color: $grey;
+}
+
+p {
+  padding: 5px 0;
+}
+
+article {
+  margin: 15px 0;
 }
 </style>

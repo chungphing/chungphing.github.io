@@ -79,6 +79,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 
   @media screen and (max-width: 767px) {
     width: 100%;

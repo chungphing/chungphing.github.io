@@ -55,12 +55,10 @@ export default {
 
   .post-title {
     color: $grey;
-    font-size: 0.8rem;
     font-weight: 500;
     transition: all 100ms ease-in-out;
   }
   .post-content p {
-    font-size: 0.8rem;
     color: $black;
   }
 }

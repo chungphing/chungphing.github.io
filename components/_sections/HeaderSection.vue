@@ -40,7 +40,7 @@ export default {
   }
   .hero {
     position: relative;
-    width: 250px;
+    //width: 250px;
     margin: 100px 0;
     margin-top: 200px;
   }
@@ -117,13 +117,12 @@ export default {
   letter-spacing: 2px;
   font-size: 0.875rem;
   font-weight: bolder;
-  padding: 5px 15px;
+  padding: 10px 15px;
   cursor: pointer;
   background-color: $blue;
   color: $text;
-  height: 40px;
   margin: 14px 0;
-  border-radius: 2px;
+  border-radius: 5px;
   transition: all 150ms ease-in-out;
 
   animation-name: fade-down;
@@ -134,9 +133,7 @@ export default {
 }
 
 .button-prime:hover {
-  background-color: darken($blue, 5%);
-  transform: scale(1.01);
-  color: $black;
+  background-color: lighten($blue, 15%);
 }
 .button-prime:active {
   background-color: darken($blue, 10%);

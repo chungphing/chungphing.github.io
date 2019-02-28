@@ -10,7 +10,6 @@ function importAll(resolve) {
     const post = resolve(key);
     const attr = post.attributes;
     const _path = `/posts/${key.replace('.md', '').replace('./', '')}`
-    console.log(attr.thumbnail);
 
      mdPosts.push({
       title: attr.title,

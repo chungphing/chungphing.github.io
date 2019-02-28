@@ -82,9 +82,10 @@ export default {};
   height: 100%;
   background-image: url("/pattern/circle_dark.svg");
   background-color: $black;
-
-  @media screen and (min-width: 767px) {
-    //border-top: 10px solid $blue-dark;
-  }
 }
+@media screen and (max-width: 767px) {
+    .footer .container {
+      min-height: 250px;
+    }
+  }
 </style>

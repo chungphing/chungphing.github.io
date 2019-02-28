@@ -2,19 +2,19 @@
   <div>
     <navigation></navigation>
     <nuxt/>
-    <FooterSection />
+    <FooterSection/>
   </div>
 </template>
 <script>
-import Navigation from '~/components/Navigation.vue'
-import FooterSection from '~/components/_sections/FooterSection.vue'
+import Navigation from "~/components/Navigation.vue";
+import FooterSection from "~/components/_sections/FooterSection.vue";
 export default {
-   components: {
+  components: {
     Navigation,
     FooterSection
   },
-  mounted: function () {
-  if (window.netlifyIdentity) {
+  mounted: function() {
+    if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
         if (!user) {
           window.netlifyIdentity.on("login", () => {
@@ -23,10 +23,8 @@ export default {
         }
       });
     }
-}
-
-}
-
+  }
+};
 </script>
 
 <style lang="scss">
@@ -44,45 +42,45 @@ a {
     color: $blue-dark;
   }
 }
-body{
+body {
   box-sizing: border-box;
-  margin: 0 ;
+  margin: 0;
   padding: 0;
 }
-p{
-  font-family: 'Helvetica Neue', sans-serif;
+p {
+  font-family: "Source Sans Pro", sans-serif;
   color: #353535;
 }
-h1{
-  font-family: 'Open Sans', sans-serif;
+h1 {
+  font-family: "Open Sans", sans-serif;
   margin-top: 2px;
   margin-bottom: 2px;
   font-weight: 500;
   font-size: 1.5rem;
 }
-h2{
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    font-weight: 500;
-    font-size: 1.2rem;
-
+h2 {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 h3 {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    font-weight: 500;
-    font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 1rem;
 }
 h4 {
-    margin-top: 2px;
-    margin-bottom: 2px;
-    font-weight: 500;
-    font-size: .8rem;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 0.8rem;
 }
 /*end fix*/
 #__nuxt {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -102,9 +100,9 @@ body {
 .header,
 .header-list,
 .footer {
-	display: flex;
+  display: flex;
 }
-.container{
+.container {
   justify-content: center;
   display: flex;
   max-width: 900px;
@@ -112,11 +110,11 @@ body {
   flex-direction: column;
   margin: 0 auto;
 }
-section{
-    display: -webkit-box;
-    display: flex;
+section {
+  display: -webkit-box;
+  display: flex;
   flex-direction: column;
-   //centering about
+  //centering about
   align-items: center;
 }
 
@@ -125,21 +123,20 @@ section{
 }
 
 .section-heading {
-    text-align: center;
-    color: $blue;
-    text-transform: uppercase;
-    font-weight: normal;
-    letter-spacing: 1px;
-    margin: 1.5rem 3rem;
+  text-align: center;
+  color: $blue;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin: 1.5rem 3rem;
 }
 .section-subheading {
-    text-align: center;
-    color: $grey;
-    text-transform: capitalize;
-    font-weight: normal;
-    letter-spacing: 1px;
+  text-align: center;
+  color: $grey;
+  text-transform: capitalize;
+  font-weight: normal;
+  letter-spacing: 1px;
 }
-
 
 .dark {
   color: $grey;
