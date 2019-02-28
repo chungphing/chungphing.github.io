@@ -42,7 +42,6 @@ export default {
     position: relative;
     //width: 250px;
     margin: 100px 0;
-    margin-top: 200px;
   }
   @media only screen and (max-width: 767px) {
     padding: 28px;
