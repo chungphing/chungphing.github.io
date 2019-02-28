@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <h1>{{attr.title}}</h1>
-    <h2>{{attr.summary}}</h2>
-    <h4>{{attr.date}}</h4>
+    <h1>{{title}}</h1>
+    <h2>{{summary}}</h2>
+    <h4>{{date}}</h4>
     <article>
-    <img :src="attr.thumbnail" :alt="attr.title">
-    <span v-html="post.html"></span>
+    <img :src="thumbnail" :alt="title">
+    <span v-html="html"></span>
     </article>
   </div>
 </template>
@@ -20,17 +20,25 @@ export default {
   data() {
     return {
       post: null,
-      attr: null
+      title: '',
+      summary: '',
+      date: '',
+      thumbnail: '',
+      html: ''
     };
   },
-  created() {
+  mounted() {
     const post = require(`~/content/blog/posts/${this.$route.params.slug}.md`);
     console.log('slug: ', this.$route.params.slug);
 
     console.log('created() post:',post);
 
-    this.post = post;
-    this.attr = post.attributes;
+    this.post = post
+    this.title = post.attributes.title
+    this.summary = post.attributes.summary
+    this.date = post.attributes.date
+    this.thumbnail = post.attributes.thumbnail
+    this.html = post.html
   }
 };
 </script>
