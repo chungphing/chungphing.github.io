@@ -86,12 +86,15 @@ export default {
 .navigation-container {
   width: 100%;
   margin: 0 auto;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   text-align: center;
   display: flex;
   z-index: 99;
+}
+.sticky {
+  position: fixed;
 }
 
 .navigation {
