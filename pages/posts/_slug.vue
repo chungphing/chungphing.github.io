@@ -25,6 +25,10 @@ export default {
   },
   created() {
     const post = require(`~/content/blog/posts/${this.$route.params.slug}.md`);
+    console.log('slug: ', this.$route.params.slug);
+
+    console.log('created() post:',post);
+
     this.post = post;
     this.attr = post.attributes;
   }
