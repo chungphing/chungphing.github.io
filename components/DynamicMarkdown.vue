@@ -1,16 +1,22 @@
 <script>
 export default {
-  props: ["renderFunc", "staticRenderFuncs"],
+  props: ["body"],
   name: "DynamicMarkdown",
-  render(createElement) {
-    return this.templateRender
-      ? this.templateRender()
-      : createElement("div", "Rendering");
+  data () {
+    return {
+      templateRender: null
+    }
   },
-
+  render(createElement) {
+        return this.templateRender ? this.templateRender() : createElement("div", "Rendering");
+  },
   created() {
-      this.templateRender = new Function(this.renderFunc)();
-      this.$options.staticRenderFns = new Function(this.staticRenderFuncs)();
+
+      this.templateRender = new Function(body.vue.renderFunc)();
+      console.log('created',this.templateRender);
+
+      this.$options.staticRenderFns = new Function(body.vue.staticRenderFuncs)();
+
   }
 };
 </script>

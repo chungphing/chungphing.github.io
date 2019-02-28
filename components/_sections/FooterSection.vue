@@ -23,7 +23,7 @@
         <li class="footer-item"><a href="#"> Footer Link</a></li>
       </ul> -->
       <ul class="footer-column">
-        <li class="footer-item">Kay, good luck</li>
+        <li class="footer-item">Kay,</li>
         <li class="footer-item"><a href="#"> Back to top</a></li>
       </ul>
     </div>

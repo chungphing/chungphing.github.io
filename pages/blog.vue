@@ -72,9 +72,6 @@ export default {
   flex-direction: column;
   align-items: flex-start;
 }
-.post h1 {
-  color: $text;
-}
 .post__first {
   flex-direction: column;
   .post-thumbnail {

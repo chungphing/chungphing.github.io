@@ -42,10 +42,15 @@ export default {
     align-items: center;
   }
   .about-card-detail-text {
+    font-size: 1rem;
+    font-weight: 500;
     align-self: center;
     max-width: 500px;
     text-align: center;
     line-height: 1.5;
+  }
+  .about-card-detail-text p {
+    color: $grey;
   }
 }
 .about-card-portrait {

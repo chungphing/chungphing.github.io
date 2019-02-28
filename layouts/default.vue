@@ -24,7 +24,7 @@ export default {
       });
     }
 }
-  
+
 }
 
 </script>
@@ -60,11 +60,25 @@ h1{
   font-weight: 500;
   font-size: 1.5rem;
 }
+h2{
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+}
 h3 {
     margin-top: 2px;
     margin-bottom: 2px;
     font-weight: 500;
     font-size: 1rem;
+}
+h4 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: 500;
+    font-size: .8rem;
 }
 /*end fix*/
 #__nuxt {
@@ -76,6 +90,9 @@ h3 {
   min-height: 100vh;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  background-color: white;
 }
 
 * {

@@ -1,8 +1,8 @@
 import Vuex from "vuex";
 import mutations from "./mutations";
+import _ from 'lodash'
 const path = require("path");
-
-const mdPosts = {};
+const mdPosts = [];
 
 function importAll(resolve) {
   resolve.keys().forEach(key => {
@@ -12,14 +12,14 @@ function importAll(resolve) {
     const _path = `/posts/${key.replace('.md', '').replace('./', '')}`
     console.log(attr.thumbnail);
 
-    mdPosts[name] = {
+     mdPosts.push({
       title: attr.title,
       summary: attr.summary,
       date: attr.date,
       thumbnail: attr.thumbnail === undefined ? '/images/placeholder.png' : attr.thumbnail,
       post: post.body,
       path: _path,
-    };
+    })
   });
 }
 // function importRecent(resolve) {
@@ -49,7 +49,7 @@ const createStore = () => {
     getters: {
       recentPosts: state => {
         //TODO: do filter logic later
-        return state.blogPosts;
+        return state.blogPosts.slice(0,3);
       },
       blogposts: state => {
         //TODO: do filter logic later
