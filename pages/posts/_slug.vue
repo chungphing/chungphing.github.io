@@ -26,20 +26,6 @@ export default {
       loading: true
     };
   },
-  // We can't use mounted() on the server side.
-  // mounted() {
-  //   const post = require(`~/content/blog/posts/${this.$route.params.slug}.md`);
-  //   console.log('slug: ', this.$route.params.slug);
-
-  //   console.log('created() post:',post);
-
-  //   this.post = post
-  //   this.title = post.attributes.title
-  //   this.summary = post.attributes.summary
-  //   this.date = post.attributes.date
-  //   this.thumbnail = post.attributes.thumbnail
-  //   this.html = post.html
-  // },
   asyncData ({ params }) {
     const post = require(`~/content/blog/posts/${params.slug}.md`);
     return {
