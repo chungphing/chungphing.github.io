@@ -14,9 +14,6 @@
 import DynamicMarkdown from "~/components/DynamicMarkdown.vue";
 
 export default {
-  components: {
-    DynamicMarkdown
-  },
   data() {
     return {
       post: null,
@@ -50,7 +47,7 @@ export default {
       title: post.attributes.title,
       summary: post.attributes.summary,
       date: post.attributes.date,
-      thumbnail: post.attributes.thumbnail,
+      thumbnail: post.attributes.thumbnail || '/images/placeholder.png' ,
       html: post.html,
       error: null,
       loading: false

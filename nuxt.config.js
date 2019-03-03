@@ -8,6 +8,8 @@ const routerBase = process.env.DEPLOY_ENV === 'MASTER' ? {
 } : {}
 
 module.exports = {
+  mode: 'spa',
+
   /*
   ** Headers of the page
   */
@@ -62,13 +64,7 @@ module.exports = {
       }
       config.module.rules.push({
         test: /\.md$/,
-        loader: 'frontmatter-markdown-loader',
-        options: {
-          vue: {
-            root: 'dynamicMarkdown'
-          }
-        }
-
+        loader: 'frontmatter-markdown-loader'
       })
     }
   },
