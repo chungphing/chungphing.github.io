@@ -8,7 +8,7 @@ const routerBase = process.env.DEPLOY_ENV === 'MASTER' ? {
 } : {}
 
 module.exports = {
-  mode: 'spa',
+  //mode: 'spa',
 
   /*
   ** Headers of the page
@@ -70,6 +70,10 @@ module.exports = {
   },
   plugins: [
     { src: '~/plugins/vue-smooth-scroll', ssr: false }
-  ]
+  ],
+  generate: {
+    fallback: true,
+    subFolders: true,
+  }
 }
 
