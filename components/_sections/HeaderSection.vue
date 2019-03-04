@@ -70,11 +70,11 @@ export default {
   width: 100%;
   font-family: inherit;
 
-  animation-name: fade-down;
-  animation-duration: 1s;
-  animation-delay: 250ms;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
+  // animation-name: fade-down;
+  // animation-duration: 1s;
+  // animation-delay: 250ms;
+  // animation-iteration-count: 1;
+  // animation-timing-function: ease-in-out;
 }
 .hero-title {
   font-weight: bold;
@@ -83,11 +83,11 @@ export default {
   font-weight: bold;
   font-size: 1.5rem;
 
-  animation-name: fade-down;
-  animation-duration: 1s;
-  animation-delay: 200ms;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
+  // animation-name: fade-down;
+  // animation-duration: 1s;
+  // animation-delay: 200ms;
+  // animation-iteration-count: 1;
+  // animation-timing-function: ease-in-out;
 
   #brand-name {
     font-family: inherit;
