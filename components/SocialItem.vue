@@ -1,10 +1,9 @@
 <template>
   <div class="social">
     <div class="about-social-item">
-      <a href="https://www.facebook.com/chungphing" target="_blank">
+      <a href="https://www.facebook.com/chungphing" aria-label="Facebook" rel="noopener" target="_blank">
         <svg
           version="1.1"
-          id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px"
@@ -22,10 +21,9 @@
       </a>
     </div>
     <div class="about-social-item">
-      <a href="https://www.instagram.com/chungphing_ly/" target="_blank">
+      <a href="https://www.instagram.com/chungphing_ly/" aria-label="Instagram" rel="noopener" target="_blank">
         <svg
           version="1.1"
-          id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px"
@@ -51,10 +49,9 @@
       </a>
     </div>
     <div class="about-social-item">
-      <a href="https://www.linkedin.com/in/chungphing" target="_blank">
+      <a href="https://www.linkedin.com/in/chungphing" aria-label="Linkedin" rel="noopener" target="_blank">
         <svg
           version="1.1"
-          id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px"
@@ -78,10 +75,9 @@
       </a>
     </div>
     <div class="about-social-item">
-      <a href="https://github.com/chungphing" target="_blank">
+      <a href="https://github.com/chungphing" aria-label="Github" rel="noopener" target="_blank">
         <svg
           version="1.1"
-          id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px"
