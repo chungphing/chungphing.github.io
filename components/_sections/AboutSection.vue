@@ -10,9 +10,9 @@
           <p>I'm a web developer based in Phnom Penh. I build website for a living and for fun.</p>
           <p>For the nerdy out there, my langauge of choice is Javascript. Although I do know and use PHP and Python, I find myself drawn into Javascript ecosystem more despite the exhausting amount of frameworks and libraries.</p>
         </div>
-        <div class="button-wrapper">
+        <!-- <div class="button-wrapper">
           <button id="get-resume">Get My Resume</button>
-        </div>
+        </div> -->
         <SocialPanel/>
       </div>
     </section>
