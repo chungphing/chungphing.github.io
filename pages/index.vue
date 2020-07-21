@@ -1,10 +1,10 @@
 <template>
-    <div class="flex flex-row">
+    <div class="flex flex-col md:flex-row">
         <div
-            class="side-bar w-1/4 flex flex-col h-screen justify-center content-center font-sans border-r border-solid border-gray-100 relative"
+            class="side-bar h-auto mt-4 md:mt-0  md:w-1/4 md:h-screen  flex flex-row md:flex-col justify-center content-center font-sans border-r border-solid border-gray-100 relative"
         >
-            <div class="fixed w-1/4">
-                <div class="rounded-full w-32 h-32 mx-auto bg-gray-300 mb-4 z-10" />
+            <div class="md:fixed md:w-1/4">
+                <div class="avatar rounded-full w-32 h-32 mx-auto bg-gray-300 mb-4 z-10" />
 
                 <h1 class="text-center text-2xl font-medium text-gray-600 z-10">Chungphing LY</h1>
                 <div class="separator flex flex-row content-center justify-center my-2">
@@ -39,7 +39,7 @@
         <div class="flex-1 flex flex-col content-center m-8">
             <section class="mb-4 skills">
                 <div
-                    class="rounded-md bg-gray-300 w-full h-16 flex flex-row content-center px-4 mb-4 items-center"
+                    class="rounded-md bg-gray-200 w-full h-16 flex flex-row content-center px-4 mb-4 items-center"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@
                     </svg>
                     <h1 class="text-xl mx-2 font-medium text-gray-800">What do I do?</h1>
                 </div>
-                <span class="flex flex-row my-4">
+                <span class="portfolio-header flex flex-row pt-2 pb-4 border-b-2 border-solid border-gray">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-browser"
@@ -85,7 +85,7 @@
                 <p
                     class="paragraph my-4 text-lg text-gray-800 leading-relaxed"
                 >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae fugiat minima voluptatem ad quos iusto omnis qui aperiam saepe animi autem excepturi dolores voluptatum, corporis beatae commodi. Inventore, voluptate ipsa.</p>
-                <span class="flex flex-row my-4">
+                <span class="business-header flex flex-row pt-2 pb-4 border-b-2 border-solid">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-briefcase"
@@ -109,7 +109,7 @@
                 <p
                     class="paragraph my-4 text-lg text-gray-800 leading-relaxed"
                 >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae fugiat minima voluptatem ad quos iusto omnis qui aperiam saepe animi autem excepturi dolores voluptatum, corporis beatae commodi. Inventore, voluptate ipsa.</p>
-                <span class="flex flex-row my-4">
+                <span class="mobile-header flex flex-row pt-2 pb-4 border-b-2 border-solid border-gray">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="icon icon-tabler icon-tabler-device-mobile"
@@ -135,7 +135,7 @@
             </section>
             <section class="mb-4 portfolio">
                 <div
-                    class="rounded-md bg-gray-300 w-full h-16 flex flex-row content-center px-4 mb-4 items-center"
+                    class="rounded-md bg-gray-200 w-full h-16 flex flex-row content-center px-4 mb-4 items-center"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -156,27 +156,27 @@
                     </svg>
                     <h1 class="text-xl mx-2 font-medium text-gray-800">Portfolio</h1>
                 </div>
-                <div class="showcases flex flex-row flex-wrap">
-                    <div class="showcase-item h-64 w-1/4 p-4">
+                <div class="showcases flex flex-col md:flex-row flex-wrap">
+                    <div class="showcase-item h-64 w-full md:w-1/4 p-4">
                         <div class="w-full h-full rounded-sm bg-gray-200"></div>
                     </div>
-                    <div class="showcase-item h-64 w-1/4 p-4">
+                    <div class="showcase-item h-64 w-full md:w-1/4 p-4">
                         <div class="w-full h-full rounded-sm bg-gray-200"></div>
                     </div>
-                    <div class="showcase-item h-64 w-1/4 p-4">
+                    <div class="showcase-item h-64 w-full md:w-1/4 p-4">
                         <div class="w-full h-full rounded-sm bg-gray-200"></div>
                     </div>
-                    <div class="showcase-item h-64 w-1/4 p-4">
+                    <div class="showcase-item h-64 w-full md:w-1/4 p-4">
                         <div class="w-full h-full rounded-sm bg-gray-200"></div>
                     </div>
-                    <div class="showcase-item h-64 w-1/4 p-4">
+                    <div class="showcase-item h-64 w-full md:w-1/4 p-4">
                         <div class="w-full h-full rounded-sm bg-gray-200"></div>
                     </div>
                 </div>
             </section>
             <section class="mb-4 contact">
                 <div
-                    class="rounded-md bg-gray-300 w-full h-16 flex flex-row content-center px-4 mb-4 items-center"
+                    class="rounded-md bg-gray-200 w-full h-16 flex flex-row content-center px-4 mb-4 items-center"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -219,6 +219,8 @@ export default {}
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@515&display=swap');
+
 .container {
     margin: 0 auto;
     min-height: 100vh;
@@ -228,14 +230,15 @@ export default {}
     text-align: center;
 }
 
+* {
+  font-family: "Quicksand", "Source Sans Pro", -apple-system,
+        BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 .title {
     font-family: "Quicksand", "Source Sans Pro", -apple-system,
         BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
         sans-serif;
-    display: block;
-    font-weight: 300;
-    font-size: 100px;
-    color: #35495e;
     letter-spacing: 1px;
 }
 
@@ -252,5 +255,20 @@ export default {}
 }
 .showcases {
     margin: -1rem;
+}
+.avatar {
+  background-image: url("~assets/img/profile.jpeg");
+  background-position: center;
+  background-size: contain;
+}
+.portfolio-header:hover {
+  border-color: #009688;
+}
+
+.business-header:hover {
+  border-color: #2196F3
+}
+.mobile-header:hover {
+  border-color: #9C27B0
 }
 </style>
